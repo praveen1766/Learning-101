@@ -115,11 +115,14 @@ Each card follows this consistent format:
 - **Navigation:** Previous/Next/Home links with icons
 
 ## Instructions for Adding New Cards
-1. **Create Card File:** Copy template, customize content for the topic
-2. **Update Index:** Add card link in the relevant `<details>` section
-3. **Update Navigation:** Modify prev/next links in adjacent cards
-4. **Test Locally:** Ensure animations, quiz, and links work
-5. **Commit & Push:** Use descriptive commit messages
+1. **Review Existing Content:** Before generating new cards, review all existing cards in the same section to understand the progression and avoid repetition
+2. **Ensure Incremental Learning:** New cards should build upon previous cards in the section, introducing concepts at the appropriate difficulty level
+3. **Maintain Consistency:** Honor the content style, examples, and difficulty progression established in existing cards for that section
+4. **Create Card File:** Copy template, customize content for the topic following the established patterns
+5. **Update Index:** Add card link in the relevant `<details>` section
+6. **Update Navigation:** Modify prev/next links in adjacent cards
+7. **Test Locally:** Ensure animations, quiz, and links work
+8. **Commit & Push:** Use descriptive commit messages
 
 ## Current Progress & Next Steps
 - **Completed:** Basic Computer Skills Cards 1-3
@@ -127,6 +130,8 @@ Each card follows this consistent format:
 - **Goal:** Build comprehensive progressive learning path
 
 ## Important Notes
+- **Honor Existing Content:** When generating new cards, always review and build upon the content, style, and progression of existing cards in the same section
+- **Incremental Progression:** Ensure new content is appropriately advanced from previous cards, maintaining the "spoon-fed" learning approach
 - Maintain consistent formatting and colors
 - Use local Andhra Pradesh examples in all content
 - Ensure mobile responsiveness
