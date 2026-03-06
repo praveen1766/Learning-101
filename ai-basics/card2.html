@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Basics - Card 2: Machine Learning Basics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 800px; padding: 30px; border-top: 6px solid #2563eb; animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        h1 { color: #1e3a8a; margin-top: 0; text-align: center; }
+        p { line-height: 1.6; color: #4b5563; font-size: 1.05em; }
+
+        .storyboard { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
+        .story-step { display: flex; align-items: center; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; gap: 20px; opacity: 0; animation: slideIn 0.8s ease-out forwards; }
+        .story-step:nth-child(1) { animation-delay: 0.5s; }
+        .story-step:nth-child(2) { animation-delay: 1s; }
+        .story-step:nth-child(3) { animation-delay: 1.5s; }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+        .story-step .icon { font-size: 80px; color: #2563eb; width: 80px; text-align: center; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-10px); } 60% { transform: translateY(-5px); } }
+        .step-content { flex: 1; }
+        .step-content h3 { margin: 0 0 10px 0; color: #2563eb; }
+        .step-content p { margin: 0; font-size: 0.95em; }
+
+        .terms-section { margin-top: 40px; padding: 20px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #0ea5e9; animation: fadeIn 1s ease-in 2s both; }
+        .terms-section h3 { margin-top: 0; color: #0c4a6e; }
+        .terms-section ul { padding-left: 20px; }
+        .terms-section li { margin-bottom: 10px; }
+
+        .quiz-section { margin-top: 40px; padding: 20px; background: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6; animation: fadeIn 1s ease-in 2.5s both; }
+        .quiz-section h3 { margin-top: 0; color: #1e40af; }
+        .btn { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #2563eb; color: white; text-decoration: none; border-radius: 6px; cursor: pointer; border: none; font-size: 1em; transition: background 0.3s; }
+        .btn:hover { background: #1d4ed8; }
+        #quiz-result { margin-top: 15px; font-weight: bold; }
+
+        .nav { text-align: center; margin-top: 30px; }
+        .nav a { text-decoration: none; color: #2563eb; font-weight: bold; margin: 0 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1><i class="fas fa-brain"></i> Card 2: Machine Learning Basics</h1>
+
+        <p>Machine Learning (ML) is how AI learns. Like a child learning to recognize mangoes by seeing many examples.</p>
+
+        <div class="storyboard">
+
+            <div class="story-step">
+                <div class="icon"><i class="fas fa-eye"></i></div>
+                <div class="step-content">
+                    <h3>Learning from Examples</h3>
+                    <p><strong>Story:</strong> Show AI photos of healthy and sick mango leaves. It learns patterns.</p>
+                    <p><strong>Fun Fact:</strong> Andhra Pradesh farmers use ML to spot pests early.</p>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <div class="step-content">
+                    <h3>Making Predictions</h3>
+                    <p><strong>Story:</strong> After learning, AI predicts if a new leaf is sick or healthy.</p>
+                    <p><strong>Fun Fact:</strong> ML predicts crop yields based on weather data.</p>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <div class="icon"><i class="fas fa-sync"></i></div>
+                <div class="step-content">
+                    <h3>Improving Over Time</h3>
+                    <p><strong>Story:</strong> More examples make AI better. Like practicing Telugu to speak fluently.</p>
+                    <p><strong>Fun Fact:</strong> AI gets smarter with more data from Andhra Pradesh farms.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="terms-section">
+            <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
+            <ul>
+                <li><strong>Machine Learning:</strong> AI that learns from data without being programmed for every case.</li>
+                <li><strong>Training Data:</strong> Examples used to teach the AI.</li>
+                <li><strong>Model:</strong> The AI's "brain" after learning.</li>
+                <li><strong>Prediction:</strong> What the AI guesses based on learning.</li>
+                <li><strong>Algorithm:</strong> The math rules for learning.</li>
+            </ul>
+        </div>
+
+        <div class="quiz-section">
+            <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
+            <p>What does machine learning use to learn?</p>
+            <select id="q1">
+                <option value="none">-- Select an answer --</option>
+                <option value="data">Data and examples</option>
+                <option value="books">Books</option>
+                <option value="music">Music</option>
+                <option value="food">Food</option>
+            </select>
+            <br>
+            <button class="btn" onclick="checkAnswer()">Submit Answer</button>
+            <p id="quiz-result"></p>
+        </div>
+
+        <div class="nav">
+            <a href="card1.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
+        </div>
+
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('q1').value;
+            const resultText = document.getElementById('quiz-result');
+            if (answer === 'data') {
+                resultText.style.color = 'green';
+                resultText.innerHTML = "Correct! Machine learning learns from data examples.";
+                resultText.style.animation = 'bounce 1s';
+            } else if (answer === 'none') {
+                resultText.style.color = 'black';
+                resultText.innerHTML = "Please select an answer.";
+            } else {
+                resultText.style.color = 'red';
+                resultText.innerHTML = "Not quite. Data is the key to learning. Try again!";
+            }
+        }
+    </script>
+</body>
+</html>
