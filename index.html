@@ -16,10 +16,13 @@
         .card-link:hover { background: #eff6ff; }
         .card-link h3 { margin: 0 0 10px 0; color: #2563eb; }
         .card-link p { margin: 0; color: #4b5563; }
-        .courses-section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .courses-section h2 { color: #1e3a8a; margin-top: 0; }
-        ol { padding-left: 20px; }
-        li { margin-bottom: 10px; }
+        .cards-section details { margin-bottom: 20px; }
+        .cards-section summary { list-style: none; cursor: pointer; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; display: flex; align-items: center; gap: 15px; transition: background 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .cards-section summary:hover { background: #eff6ff; }
+        .cards-section summary i { color: #2563eb; font-size: 1.5em; }
+        .cards-section summary::-webkit-details-marker { display: none; }
+        .cards-section details[open] summary { background: #eff6ff; }
+        .cards-section details div { padding-left: 20px; margin-top: 15px; }
     </style>
 </head>
 <body>
@@ -33,82 +36,96 @@
         <section class="cards-section">
             <h2>Your Learning Journey</h2>
 
-            <h3><i class="fas fa-computer-mouse"></i> Basic Computer Skills</h3>
-            <a href="basic-computer-skills/card1.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 1: What is a Computer?</h4>
-                <p>Learn the basic parts of a computer with Andhra Pradesh examples. Understand monitor, keyboard, mouse, and CPU.</p>
-            </a>
-            <a href="basic-computer-skills/card2.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 2: Turning On and Off a Computer</h4>
-                <p>Learn how to start and shut down a computer safely, like starting a tractor.</p>
-            </a>
-            <!-- More cards here -->
+            <details>
+                <summary><i class="fas fa-computer-mouse"></i> Basic Computer Skills</summary>
+                <a href="basic-computer-skills/card1.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 1: What is a Computer?</h4>
+                    <p>Learn the basic parts of a computer with Andhra Pradesh examples. Understand monitor, keyboard, mouse, and CPU.</p>
+                </a>
+                <a href="basic-computer-skills/card2.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 2: Turning On and Off a Computer</h4>
+                    <p>Learn how to start and shut down a computer safely, like starting a tractor.</p>
+                </a>
+                <!-- More cards here -->
+            </details>
 
-            <h3><i class="fas fa-wifi"></i> Internet Fundamentals</h3>
-            <a href="internet-fundamentals/card1.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 1: How IT Moves the World</h4>
-                <p>Understand Clients, Networks, and Servers using the APSRTC bus booking app.</p>
-            </a>
-            <a href="internet-fundamentals/card2.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 2: How the Internet Works</h4>
-                <p>Learn how devices connect and data travels on the internet.</p>
-            </a>
-            <!-- More cards here -->
+            <details>
+                <summary><i class="fas fa-wifi"></i> Internet Fundamentals</summary>
+                <a href="internet-fundamentals/card1.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 1: How IT Moves the World</h4>
+                    <p>Understand Clients, Networks, and Servers using the APSRTC bus booking app.</p>
+                </a>
+                <a href="internet-fundamentals/card2.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 2: How the Internet Works</h4>
+                    <p>Learn how devices connect and data travels on the internet.</p>
+                </a>
+                <!-- More cards here -->
+            </details>
 
-            <h3><i class="fas fa-code"></i> Programming Basics</h3>
-            <a href="programming-basics/card1.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 1: What is Programming?</h4>
-                <p>Learn what programming is with Andhra Pradesh examples. Understand code, languages, and debugging.</p>
-            </a>
-            <a href="programming-basics/card2.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 2: Writing Your First Program</h4>
-                <p>Write and run a simple Python program, like printing a greeting.</p>
-            </a>
-            <!-- More cards here -->
+            <details>
+                <summary><i class="fas fa-code"></i> Programming Basics</summary>
+                <a href="programming-basics/card1.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 1: What is Programming?</h4>
+                    <p>Learn what programming is with Andhra Pradesh examples. Understand code, languages, and debugging.</p>
+                </a>
+                <a href="programming-basics/card2.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 2: Writing Your First Program</h4>
+                    <p>Write and run a simple Python program, like printing a greeting.</p>
+                </a>
+                <!-- More cards here -->
+            </details>
 
-            <h3><i class="fas fa-database"></i> Data and Databases</h3>
-            <a href="data-databases/card1.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 1: What is a Database?</h4>
-                <p>Learn about storing and organizing data with Andhra Pradesh ration card examples.</p>
-            </a>
-            <a href="data-databases/card2.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 2: Storing and Retrieving Data</h4>
-                <p>Learn how to add, find, and update data in databases.</p>
-            </a>
-            <!-- More cards here -->
+            <details>
+                <summary><i class="fas fa-database"></i> Data and Databases</summary>
+                <a href="data-databases/card1.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 1: What is a Database?</h4>
+                    <p>Learn about storing and organizing data with Andhra Pradesh ration card examples.</p>
+                </a>
+                <a href="data-databases/card2.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 2: Storing and Retrieving Data</h4>
+                    <p>Learn how to add, find, and update data in databases.</p>
+                </a>
+                <!-- More cards here -->
+            </details>
 
-            <h3><i class="fas fa-brain"></i> AI Basics</h3>
-            <a href="ai-basics/card1.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 1: What is AI?</h4>
-                <p>Discover Artificial Intelligence with local Andhra Pradesh farming examples.</p>
-            </a>
-            <a href="ai-basics/card2.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 2: Machine Learning Basics</h4>
-                <p>Learn how AI learns from examples and makes predictions.</p>
-            </a>
-            <!-- More cards here -->
+            <details>
+                <summary><i class="fas fa-brain"></i> AI Basics</summary>
+                <a href="ai-basics/card1.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 1: What is AI?</h4>
+                    <p>Discover Artificial Intelligence with local Andhra Pradesh farming examples.</p>
+                </a>
+                <a href="ai-basics/card2.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 2: Machine Learning Basics</h4>
+                    <p>Learn how AI learns from examples and makes predictions.</p>
+                </a>
+                <!-- More cards here -->
+            </details>
 
-            <h3><i class="fas fa-cogs"></i> AI Tools and Applications</h3>
-            <a href="ai-tools/card1.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 1: Introduction to AI Tools</h4>
-                <p>Learn about AI tools like chatbots and data analysis with Andhra Pradesh examples.</p>
-            </a>
-            <a href="ai-tools/card2.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 2: Using ChatGPT for Learning</h4>
-                <p>Learn how to use ChatGPT for questions, ideas, and language practice.</p>
-            </a>
-            <!-- More cards here -->
+            <details>
+                <summary><i class="fas fa-cogs"></i> AI Tools and Applications</summary>
+                <a href="ai-tools/card1.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 1: Introduction to AI Tools</h4>
+                    <p>Learn about AI tools like chatbots and data analysis with Andhra Pradesh examples.</p>
+                </a>
+                <a href="ai-tools/card2.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 2: Using ChatGPT for Learning</h4>
+                    <p>Learn how to use ChatGPT for questions, ideas, and language practice.</p>
+                </a>
+                <!-- More cards here -->
+            </details>
 
-            <h3><i class="fas fa-user-tie"></i> Job Preparation</h3>
-            <a href="job-prep/card1.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 1: Getting Started with IT Jobs</h4>
-                <p>Learn to build a resume, find jobs, and prepare for interviews in Andhra Pradesh.</p>
-            </a>
-            <a href="job-prep/card2.html" class="card-link">
-                <h4><i class="fas fa-play-circle"></i> Card 2: Building a Resume</h4>
-                <p>Learn how to create a professional resume with personal info, skills, and experience.</p>
-            </a>
-            <!-- More cards here -->
+            <details>
+                <summary><i class="fas fa-user-tie"></i> Job Preparation</summary>
+                <a href="job-prep/card1.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 1: Getting Started with IT Jobs</h4>
+                    <p>Learn to build a resume, find jobs, and prepare for interviews in Andhra Pradesh.</p>
+                </a>
+                <a href="job-prep/card2.html" class="card-link">
+                    <h4><i class="fas fa-play-circle"></i> Card 2: Building a Resume</h4>
+                    <p>Learn how to create a professional resume with personal info, skills, and experience.</p>
+                </a>
+                <!-- More cards here -->
+            </details>
         </section>
 
         <section class="courses-section">
