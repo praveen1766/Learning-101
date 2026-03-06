@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Basics - Card 2: Writing Your First Program</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 800px; padding: 30px; border-top: 6px solid #2563eb; animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        h1 { color: #1e3a8a; margin-top: 0; text-align: center; }
+        p { line-height: 1.6; color: #4b5563; font-size: 1.05em; }
+
+        .storyboard { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
+        .story-step { display: flex; align-items: center; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; gap: 20px; opacity: 0; animation: slideIn 0.8s ease-out forwards; }
+        .story-step:nth-child(1) { animation-delay: 0.5s; }
+        .story-step:nth-child(2) { animation-delay: 1s; }
+        .story-step:nth-child(3) { animation-delay: 1.5s; }
+        .story-step:nth-child(4) { animation-delay: 2s; }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+        .story-step .icon { font-size: 80px; color: #2563eb; width: 80px; text-align: center; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-10px); } 60% { transform: translateY(-5px); } }
+        .step-content { flex: 1; }
+        .step-content h3 { margin: 0 0 10px 0; color: #2563eb; }
+        .step-content p { margin: 0; font-size: 0.95em; }
+
+        .code-example { background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace; margin: 20px 0; animation: fadeIn 1s ease-in 2.5s both; }
+        .code-example pre { margin: 0; }
+
+        .terms-section { margin-top: 40px; padding: 20px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #0ea5e9; animation: fadeIn 1s ease-in 3s both; }
+        .terms-section h3 { margin-top: 0; color: #0c4a6e; }
+        .terms-section ul { padding-left: 20px; }
+        .terms-section li { margin-bottom: 10px; }
+
+        .quiz-section { margin-top: 40px; padding: 20px; background: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6; animation: fadeIn 1s ease-in 3.5s both; }
+        .quiz-section h3 { margin-top: 0; color: #1e40af; }
+        .btn { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #2563eb; color: white; text-decoration: none; border-radius: 6px; cursor: pointer; border: none; font-size: 1em; transition: background 0.3s; }
+        .btn:hover { background: #1d4ed8; }
+        #quiz-result { margin-top: 15px; font-weight: bold; }
+
+        .nav { text-align: center; margin-top: 30px; }
+        .nav a { text-decoration: none; color: #2563eb; font-weight: bold; margin: 0 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1><i class="fas fa-code"></i> Card 2: Writing Your First Program</h1>
+
+        <p>Now that you know what programming is, let's write a simple program. It's like writing a short note to a friend. We'll use Python, easy like Telugu.</p>
+
+        <div class="storyboard">
+
+            <div class="story-step">
+                <div class="icon"><i class="fas fa-edit"></i></div>
+                <div class="step-content">
+                    <h3>Open a Text Editor</h3>
+                    <p><strong>Story:</strong> Use Notepad or any simple editor. Type your code there.</p>
+                    <p><strong>Fun Fact:</strong> In Andhra Pradesh, start with free online editors if no computer.</p>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <div class="icon"><i class="fas fa-keyboard"></i></div>
+                <div class="step-content">
+                    <h3>Type the Code</h3>
+                    <p><strong>Story:</strong> Write: print("Hello, Andhra Pradesh!")</p>
+                    <p><strong>Fun Fact:</strong> "Print" means show on screen, like displaying a message.</p>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <div class="icon"><i class="fas fa-play"></i></div>
+                <div class="step-content">
+                    <h3>Run the Program</h3>
+                    <p><strong>Story:</strong> Save as hello.py, then run with Python. It shows "Hello, Andhra Pradesh!"</p>
+                    <p><strong>Fun Fact:</strong> Like sending a greeting to the whole state!</p>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <div class="icon"><i class="fas fa-plus"></i></div>
+                <div class="step-content">
+                    <h3>Add More</h3>
+                    <p><strong>Story:</strong> Try: print("I am learning programming!")</p>
+                    <p><strong>Fun Fact:</strong> Each line is a step in your recipe.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="code-example">
+            <h4>Your First Python Program:</h4>
+            <pre>
+print("Hello, Andhra Pradesh!")
+print("I am learning programming!")
+            </pre>
+        </div>
+
+        <div class="terms-section">
+            <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
+            <ul>
+                <li><strong>Text Editor:</strong> A program to write and edit code, like Notepad.</li>
+                <li><strong>Print:</strong> A command to display text on the screen.</li>
+                <li><strong>Run/Execute:</strong> Making the computer follow the code.</li>
+                <li><strong>.py File:</strong> A Python file extension, like .doc for Word.</li>
+                <li><strong>Syntax:</strong> The rules for writing code correctly.</li>
+            </ul>
+        </div>
+
+        <div class="quiz-section">
+            <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
+            <p>What does 'print' do in Python?</p>
+            <select id="q1">
+                <option value="none">-- Select an answer --</option>
+                <option value="display">Displays text on the screen</option>
+                <option value="printpaper">Prints on paper</option>
+                <option value="calculate">Does math</option>
+                <option value="dance">Makes the computer dance</option>
+            </select>
+            <br>
+            <button class="btn" onclick="checkAnswer()">Submit Answer</button>
+            <p id="quiz-result"></p>
+        </div>
+
+        <div class="nav">
+            <a href="card1.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
+        </div>
+
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('q1').value;
+            const resultText = document.getElementById('quiz-result');
+            if (answer === 'display') {
+                resultText.style.color = 'green';
+                resultText.innerHTML = "Correct! Print shows text on the screen. You're coding!";
+                resultText.style.animation = 'bounce 1s';
+            } else if (answer === 'none') {
+                resultText.style.color = 'black';
+                resultText.innerHTML = "Please select an answer.";
+            } else {
+                resultText.style.color = 'red';
+                resultText.innerHTML = "Not quite. Print is for displaying messages. Try again!";
+            }
+        }
+    </script>
+</body>
+</html>
