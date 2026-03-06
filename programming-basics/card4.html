@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming Basics - Card 3: Variables and Data Types</title>
+    <title>Programming Basics - Card 4: Basic Math and Operators</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
@@ -23,7 +23,7 @@
         .step-content { flex: 1; }
         .step-content h3 { margin: 0 0 10px 0; color: #2563eb; }
         .step-content p { margin: 0; font-size: 0.95em; }
-
+        
         .code-example { background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace; margin: 20px 0; animation: fadeIn 1s ease-in 2.5s both; }
         .code-example pre { margin: 0; }
 
@@ -45,82 +45,87 @@
 <body>
 
     <div class="card">
-        <h1><i class="fas fa-box"></i> Card 3: Variables - Storing Information</h1>
+        <h1><i class="fas fa-calculator"></i> Card 4: Basic Math and Operators</h1>
 
-        <p>In programming, we need to store information. We use <strong>variables</strong> for this, which are like labeled jars. In a kitchen in Andhra, you have jars for 'Rice', 'Lentils', and 'Chilli Powder'. In programming, we have variables for names, ages, and so on.</p>
+        <p>Just like you use a calculator for your daily accounts, you can perform math in programming. Think of it as telling the computer to do calculations for you, like a shopkeeper in a village market totaling a customer's bill.</p>
 
         <div class="storyboard">
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-tag"></i></div>
+                <div class="icon"><i class="fas fa-plus-circle"></i></div>
                 <div class="step-content">
-                    <h3>1. Creating a Variable</h3>
-                    <p><strong>Story:</strong> Let's create a variable to store a city name. The variable is the "jar," and the city name is what's inside.</p>
-                    <p><strong>The Code:</strong> <code>city = "Vijayawada"</code></p>
+                    <h3>1. Addition (+)</h3>
+                    <p><strong>Story:</strong> You can add numbers together using the `+` sign. This is useful for totaling items.</p>
+                    <p><strong>The Code:</strong> <code>total_cost = 50 + 25</code></p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-font"></i></div>
+                <div class="icon"><i class="fas fa-minus-circle"></i></div>
                 <div class="step-content">
-                    <h3>2. Data Type: String (Text)</h3>
-                    <p><strong>Story:</strong> "Vijayawada" is text. In programming, text is called a <strong>String</strong>. It's always wrapped in quotes.</p>
-                    <p><strong>Analogy:</strong> The name written on the jar's label.</p>
+                    <h3>2. Subtraction (-)</h3>
+                    <p><strong>Story:</strong> Use the `-` sign to subtract one number from another, like calculating the remaining stock.</p>
+                    <p><strong>The Code:</strong> <code>stock_left = 100 - 30</code></p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-sort-numeric-up"></i></div>
+                <div class="icon"><i class="fas fa-times-circle"></i></div>
                 <div class="step-content">
-                    <h3>3. Data Type: Integer (Number)</h3>
-                    <p><strong>Story:</strong> Let's store the number of mangoes from a farm. Numbers don't need quotes.</p>
-                    <p><strong>The Code:</strong> <code>mangoes = 150</code></p>
+                    <h3>3. Multiplication (*)</h3>
+                    <p><strong>Story:</strong> Use the `*` sign (asterisk) to multiply numbers, like calculating the total price for multiple items.</p>
+                    <p><strong>The Code:</strong> <code>total_price = 10 * 5</code> (for 5 items costing 10 each)</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-print"></i></div>
+                <div class="icon"><i class="fas fa-divide"></i></div>
                 <div class="step-content">
-                    <h3>4. Using Your Variables</h3>
-                    <p><strong>Story:</strong> Now you can use the jar's label (the variable name) to get what's inside.</p>
-                    <p><strong>The Code:</strong> <code>print("I live in", city)</code> will show "I live in Vijayawada".</p>
+                    <h3>4. Division (/)</h3>
+                    <p><strong>Story:</strong> Use the `/` sign to divide numbers, like sharing a profit among partners.</p>
+                    <p><strong>The Code:</strong> <code>profit_per_person = 1000 / 4</code></p>
                 </div>
             </div>
 
         </div>
 
         <div class="code-example">
-            <h4>Python Code with Variables:</h4>
+            <h4>Python Code with Math:</h4>
             <pre>
-# Storing text (a String)
-city = "Vijayawada"
-print("The city is:", city)
+# Calculating the cost of mangoes and bananas
+mango_cost = 150
+banana_cost = 40
+total = mango_cost + banana_cost
+print("Total cost is:", total)
 
-# Storing a whole number (an Integer)
-mangoes = 150
-print("Number of mangoes:", mangoes)
+# Calculating how many boxes are needed
+mangoes_per_box = 12
+total_mangoes = 240
+boxes_needed = total_mangoes / mangoes_per_box
+print("Boxes needed:", boxes_needed)
             </pre>
         </div>
 
         <div class="terms-section">
             <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
             <ul>
-                <li><strong>Variable:</strong> A named container for storing data.</li>
-                <li><strong>Data Type:</strong> The type of data a variable holds (e.g., text or number).</li>
-                <li><strong>String:</strong> A data type for text. Must be in quotes (e.g., "Hello").</li>
-                <li><strong>Integer:</strong> A data type for whole numbers (e.g., 10, 50, -5).</li>
-                <li><strong>Assignment (=):</strong> The act of giving a value to a variable. The `=` sign is the assignment operator.</li>
+                <li><strong>Operator:</strong> A symbol that performs an operation (e.g., `+`, `-`, `*`, `/`).</li>
+                <li><strong>Addition (+):</strong> Adds two numbers.</li>
+                <li><strong>Subtraction (-):</strong> Subtracts one number from another.</li>
+                <li><strong>Multiplication (*):</strong> Multiplies two numbers.</li>
+                <li><strong>Division (/):</strong> Divides one number by another.</li>
+                <li><strong>Float:</strong> A number with a decimal point (e.g., 2.5). Division often results in a float.</li>
             </ul>
         </div>
 
         <div class="quiz-section">
             <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
-            <p>If you have the code <code>name = "Ramesh"</code>, what is the variable?</p>
+            <p>Which symbol is used for multiplication in programming?</p>
             <select id="q1">
                 <option value="none">-- Select an answer --</option>
-                <option value="name">name</option>
-                <option value="Ramesh">"Ramesh"</option>
-                <option value="equals">=</option>
+                <option value="x">x</option>
+                <option value="*">* (asterisk)</option>
+                <option value="#">#</option>
             </select>
             <br>
             <button class="btn" onclick="checkAnswer()">Submit Answer</button>
@@ -128,9 +133,9 @@ print("Number of mangoes:", mangoes)
         </div>
 
         <div class="nav">
-            <a href="card2.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="card3.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
             <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
-            <a href="card4.html">Next Card <i class="fas fa-arrow-right"></i></a>
+            <a href="card5.html">Next Card <i class="fas fa-arrow-right"></i></a>
         </div>
 
     </div>
@@ -139,15 +144,15 @@ print("Number of mangoes:", mangoes)
         function checkAnswer() {
             const answer = document.getElementById('q1').value;
             const resultText = document.getElementById('quiz-result');
-            if (answer === 'name') {
+            if (answer === '*') {
                 resultText.style.color = 'green';
-                resultText.innerHTML = "Excellent! 'name' is the variable holding the value 'Ramesh'. You're getting it!";
+                resultText.innerHTML = "Correct! The asterisk `*` is used for multiplication.";
             } else if (answer === 'none') {
                 resultText.style.color = 'black';
                 resultText.innerHTML = "Please select an answer.";
             } else {
                 resultText.style.color = 'red';
-                resultText.innerHTML = "Not quite. Remember, the variable is the label on the jar, not what's inside. Try again!";
+                resultText.innerHTML = "Not quite. In programming, we use the asterisk `*` for multiplication. Try again!";
             }
         }
     </script>

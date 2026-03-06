@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming Basics - Card 3: Variables and Data Types</title>
+    <title>Programming Basics - Card 5: Conditional Logic (If/Else)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
@@ -17,7 +17,6 @@
         .story-step:nth-child(1) { animation-delay: 0.5s; }
         .story-step:nth-child(2) { animation-delay: 1s; }
         .story-step:nth-child(3) { animation-delay: 1.5s; }
-        .story-step:nth-child(4) { animation-delay: 2s; }
         @keyframes slideIn { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
         .story-step .icon { font-size: 48px; color: #2563eb; width: 48px; text-align: center; }
         .step-content { flex: 1; }
@@ -45,82 +44,79 @@
 <body>
 
     <div class="card">
-        <h1><i class="fas fa-box"></i> Card 3: Variables - Storing Information</h1>
+        <h1><i class="fas fa-random"></i> Card 5: Conditional Logic (If/Else)</h1>
 
-        <p>In programming, we need to store information. We use <strong>variables</strong> for this, which are like labeled jars. In a kitchen in Andhra, you have jars for 'Rice', 'Lentils', and 'Chilli Powder'. In programming, we have variables for names, ages, and so on.</p>
+        <p>Programming is not just about giving a fixed list of instructions. Sometimes, you need the computer to make decisions. This is called conditional logic. It's like deciding what to do based on the weather in your village in Andhra Pradesh.</p>
 
         <div class="storyboard">
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-tag"></i></div>
+                <div class="icon"><i class="fas fa-cloud-sun-rain"></i></div>
                 <div class="step-content">
-                    <h3>1. Creating a Variable</h3>
-                    <p><strong>Story:</strong> Let's create a variable to store a city name. The variable is the "jar," and the city name is what's inside.</p>
-                    <p><strong>The Code:</strong> <code>city = "Vijayawada"</code></p>
+                    <h3>1. The `if` Statement: Making a Choice</h3>
+                    <p><strong>Story:</strong> The `if` statement checks if a certain condition is true. If it is, the computer will run a specific piece of code.</p>
+                    <p><strong>Analogy:</strong> <strong>If</strong> it is raining, <strong>then</strong> you take an umbrella.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-font"></i></div>
+                <div class="icon"><i class="fas fa-else"></i></div>
                 <div class="step-content">
-                    <h3>2. Data Type: String (Text)</h3>
-                    <p><strong>Story:</strong> "Vijayawada" is text. In programming, text is called a <strong>String</strong>. It's always wrapped in quotes.</p>
-                    <p><strong>Analogy:</strong> The name written on the jar's label.</p>
+                    <h3>2. The `else` Statement: The Alternative</h3>
+                    <p><strong>Story:</strong> The `else` statement gives the computer an alternative action to take if the `if` condition is false.</p>
+                    <p><strong>Analogy:</strong> <strong>If</strong> it is raining, take an umbrella. <strong>Else</strong> (otherwise), wear your sunglasses.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-sort-numeric-up"></i></div>
+                <div class="icon"><i class="fas fa-equals"></i></div>
                 <div class="step-content">
-                    <h3>3. Data Type: Integer (Number)</h3>
-                    <p><strong>Story:</strong> Let's store the number of mangoes from a farm. Numbers don't need quotes.</p>
-                    <p><strong>The Code:</strong> <code>mangoes = 150</code></p>
-                </div>
-            </div>
-
-            <div class="story-step">
-                <div class="icon"><i class="fas fa-print"></i></div>
-                <div class="step-content">
-                    <h3>4. Using Your Variables</h3>
-                    <p><strong>Story:</strong> Now you can use the jar's label (the variable name) to get what's inside.</p>
-                    <p><strong>The Code:</strong> <code>print("I live in", city)</code> will show "I live in Vijayawada".</p>
+                    <h3>3. Comparison Operators</h3>
+                    <p><strong>Story:</strong> To create conditions, we use comparison operators. `==` (is equal to), `!=` (is not equal to), `>` (greater than), and `<` (less than).</p>
+                    <p><strong>Example:</strong> `if age > 18` checks if the value in the `age` variable is greater than 18.</p>
                 </div>
             </div>
 
         </div>
 
         <div class="code-example">
-            <h4>Python Code with Variables:</h4>
+            <h4>Python Code with If/Else:</h4>
             <pre>
-# Storing text (a String)
-city = "Vijayawada"
-print("The city is:", city)
+age = 20
 
-# Storing a whole number (an Integer)
-mangoes = 150
-print("Number of mangoes:", mangoes)
+if age >= 18:
+  print("You are old enough to vote.")
+else:
+  print("You are not old enough to vote yet.")
+
+# Another example
+temperature = 35 # in Celsius
+if temperature > 30:
+  print("It's a hot day in Andhra!")
+else:
+  print("The weather is pleasant.")
             </pre>
         </div>
 
         <div class="terms-section">
             <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
             <ul>
-                <li><strong>Variable:</strong> A named container for storing data.</li>
-                <li><strong>Data Type:</strong> The type of data a variable holds (e.g., text or number).</li>
-                <li><strong>String:</strong> A data type for text. Must be in quotes (e.g., "Hello").</li>
-                <li><strong>Integer:</strong> A data type for whole numbers (e.g., 10, 50, -5).</li>
-                <li><strong>Assignment (=):</strong> The act of giving a value to a variable. The `=` sign is the assignment operator.</li>
+                <li><strong>Condition:</strong> A statement that is either true or false (e.g., `age > 18`).</li>
+                <li><strong>`if` statement:</strong> A block of code that runs only if a condition is true.</li>
+                <li><strong>`else` statement:</strong> A block of code that runs if the `if` condition is false.</li>
+                <li><strong>Comparison Operators:</strong> Symbols like `==`, `!=`, `>`, `<` used to compare values.</li>
+                <li><strong>Boolean:</strong> A data type that can only be `True` or `False`. Conditions result in a Boolean value.</li>
             </ul>
         </div>
 
         <div class="quiz-section">
             <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
-            <p>If you have the code <code>name = "Ramesh"</code>, what is the variable?</p>
+            <p>In the code `if temperature > 30:`, what happens if the `temperature` is 25?</p>
             <select id="q1">
                 <option value="none">-- Select an answer --</option>
-                <option value="name">name</option>
-                <option value="Ramesh">"Ramesh"</option>
-                <option value="equals">=</option>
+                <option value="if">The `if` block runs.</option>
+                <option value="else">The `else` block (if it exists) runs.</option>
+                <option value="nothing">Nothing happens.</option>
             </select>
             <br>
             <button class="btn" onclick="checkAnswer()">Submit Answer</button>
@@ -128,9 +124,9 @@ print("Number of mangoes:", mangoes)
         </div>
 
         <div class="nav">
-            <a href="card2.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="card4.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
             <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
-            <a href="card4.html">Next Card <i class="fas fa-arrow-right"></i></a>
+            <a href="card6.html">Next Card <i class="fas fa-arrow-right"></i></a>
         </div>
 
     </div>
@@ -139,15 +135,15 @@ print("Number of mangoes:", mangoes)
         function checkAnswer() {
             const answer = document.getElementById('q1').value;
             const resultText = document.getElementById('quiz-result');
-            if (answer === 'name') {
+            if (answer === 'else') {
                 resultText.style.color = 'green';
-                resultText.innerHTML = "Excellent! 'name' is the variable holding the value 'Ramesh'. You're getting it!";
+                resultText.innerHTML = "Correct! Since 25 is not greater than 30, the condition is false, and the `else` block would run.";
             } else if (answer === 'none') {
                 resultText.style.color = 'black';
                 resultText.innerHTML = "Please select an answer.";
             } else {
                 resultText.style.color = 'red';
-                resultText.innerHTML = "Not quite. Remember, the variable is the label on the jar, not what's inside. Try again!";
+                resultText.innerHTML = "Not quite. The `if` block only runs if the condition is true. Think about what happens when it's false.";
             }
         }
     </script>

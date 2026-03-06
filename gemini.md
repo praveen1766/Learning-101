@@ -10,7 +10,7 @@ This is a static HTML website hosted on GitHub Pages, designed as an interactive
 - **Sections/Folders:**
   - `basic-computer-skills/` - Cards 1, 2, 3, 4, 5, 6, 7
   - `internet-fundamentals/` - Cards 1, 2, 3
-  - `programming-basics/` - Cards 1, 2, 3
+  - `programming-basics/` - Cards 1, 2, 3, 4, 5, 6, 7
   - `data-databases/` - Cards 1, 2, 3
   - `ai-basics/` - Cards 1, 2, 3
   - `ai-tools/` - Cards 1, 2, 3
@@ -126,8 +126,8 @@ Each card follows this consistent format:
 9. **Commit & Push:** Use descriptive commit messages including the updated gemini.md
 
 ## Current Progress & Next Steps
-- **Completed:** Basic Computer Skills section is now complete up to Card 7.
-- **Next:** Move to the next section, "Internet Fundamentals", and add more advanced cards.
+- **Completed:** Basic Computer Skills and Programming Basics sections are now complete up to Card 7.
+- **Next:** Move to the next section, "Data and Databases", and add more advanced cards.
 - **Goal:** Build comprehensive progressive learning path
 
 ## Important Notes

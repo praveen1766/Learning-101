@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming Basics - Card 3: Variables and Data Types</title>
+    <title>Programming Basics - Card 6: Loops (For/While)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
@@ -17,7 +17,6 @@
         .story-step:nth-child(1) { animation-delay: 0.5s; }
         .story-step:nth-child(2) { animation-delay: 1s; }
         .story-step:nth-child(3) { animation-delay: 1.5s; }
-        .story-step:nth-child(4) { animation-delay: 2s; }
         @keyframes slideIn { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
         .story-step .icon { font-size: 48px; color: #2563eb; width: 48px; text-align: center; }
         .step-content { flex: 1; }
@@ -45,82 +44,77 @@
 <body>
 
     <div class="card">
-        <h1><i class="fas fa-box"></i> Card 3: Variables - Storing Information</h1>
+        <h1><i class="fas fa-sync-alt"></i> Card 6: Loops (Repeating Actions)</h1>
 
-        <p>In programming, we need to store information. We use <strong>variables</strong> for this, which are like labeled jars. In a kitchen in Andhra, you have jars for 'Rice', 'Lentils', and 'Chilli Powder'. In programming, we have variables for names, ages, and so on.</p>
+        <p>Imagine you have to write "Hello, Andhra Pradesh!" 10 times. You could write the same line of code 10 times, or you could use a loop! A loop is a way to tell the computer to repeat an action, saving you a lot of work.</p>
 
         <div class="storyboard">
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-tag"></i></div>
+                <div class="icon"><i class="fas fa-redo-alt"></i></div>
                 <div class="step-content">
-                    <h3>1. Creating a Variable</h3>
-                    <p><strong>Story:</strong> Let's create a variable to store a city name. The variable is the "jar," and the city name is what's inside.</p>
-                    <p><strong>The Code:</strong> <code>city = "Vijayawada"</code></p>
+                    <h3>1. Why We Need Loops</h3>
+                    <p><strong>Story:</strong> Loops are for efficiency. Instead of writing the same code again and again, you write it once and tell the computer how many times to repeat it.</p>
+                    <p><strong>Analogy:</strong> A farmer telling a worker to water 50 plants, instead of saying "water this plant," "water this plant," 50 times.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-font"></i></div>
+                <div class="icon"><i class="fas fa-list-ol"></i></div>
                 <div class="step-content">
-                    <h3>2. Data Type: String (Text)</h3>
-                    <p><strong>Story:</strong> "Vijayawada" is text. In programming, text is called a <strong>String</strong>. It's always wrapped in quotes.</p>
-                    <p><strong>Analogy:</strong> The name written on the jar's label.</p>
+                    <h3>2. The `for` Loop: Repeating a Set Number of Times</h3>
+                    <p><strong>Story:</strong> A `for` loop is perfect when you know exactly how many times you want to do something.</p>
+                    <p><strong>The Code:</strong> <code>for i in range(5): print("This will print 5 times")</code></p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-sort-numeric-up"></i></div>
+                <div class="icon"><i class="fas fa-infinity"></i></div>
                 <div class="step-content">
-                    <h3>3. Data Type: Integer (Number)</h3>
-                    <p><strong>Story:</strong> Let's store the number of mangoes from a farm. Numbers don't need quotes.</p>
-                    <p><strong>The Code:</strong> <code>mangoes = 150</code></p>
-                </div>
-            </div>
-
-            <div class="story-step">
-                <div class="icon"><i class="fas fa-print"></i></div>
-                <div class="step-content">
-                    <h3>4. Using Your Variables</h3>
-                    <p><strong>Story:</strong> Now you can use the jar's label (the variable name) to get what's inside.</p>
-                    <p><strong>The Code:</strong> <code>print("I live in", city)</code> will show "I live in Vijayawada".</p>
+                    <h3>3. The `while` Loop: Repeating Until a Condition is Met</h3>
+                    <p><strong>Story:</strong> A `while` loop is used when you want to repeat an action as long as a certain condition is true. It stops when the condition becomes false.</p>
+                    <p><strong>Analogy:</strong> A worker who is told to keep packing mangoes <strong>while</strong> there are still mangoes in the basket.</p>
                 </div>
             </div>
 
         </div>
 
         <div class="code-example">
-            <h4>Python Code with Variables:</h4>
+            <h4>Python Code with Loops:</h4>
             <pre>
-# Storing text (a String)
-city = "Vijayawada"
-print("The city is:", city)
+# A for loop to print numbers 0 to 4
+print("For loop example:")
+for i in range(5):
+  print(i)
 
-# Storing a whole number (an Integer)
-mangoes = 150
-print("Number of mangoes:", mangoes)
+# A while loop to count up to 3
+print("
+While loop example:")
+count = 0
+while count < 3:
+  print("Count is:", count)
+  count = count + 1
             </pre>
         </div>
 
         <div class="terms-section">
             <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
             <ul>
-                <li><strong>Variable:</strong> A named container for storing data.</li>
-                <li><strong>Data Type:</strong> The type of data a variable holds (e.g., text or number).</li>
-                <li><strong>String:</strong> A data type for text. Must be in quotes (e.g., "Hello").</li>
-                <li><strong>Integer:</strong> A data type for whole numbers (e.g., 10, 50, -5).</li>
-                <li><strong>Assignment (=):</strong> The act of giving a value to a variable. The `=` sign is the assignment operator.</li>
+                <li><strong>Loop:</strong> A block of code that repeats.</li>
+                <li><strong>`for` loop:</strong> A loop that repeats a specific number of times.</li>
+                <li><strong>`while` loop:</strong> A loop that repeats as long as a condition is true.</li>
+                <li><strong>Iteration:</strong> A single pass through the loop's code.</li>
+                <li><strong>Condition:</strong> A statement that evaluates to `True` or `False`, used to control a `while` loop.</li>
             </ul>
         </div>
 
         <div class="quiz-section">
             <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
-            <p>If you have the code <code>name = "Ramesh"</code>, what is the variable?</p>
+            <p>If you want to print the names of all 50 students in a class, which loop is better to use?</p>
             <select id="q1">
                 <option value="none">-- Select an answer --</option>
-                <option value="name">name</option>
-                <option value="Ramesh">"Ramesh"</option>
-                <option value="equals">=</option>
+                <option value="for">A `for` loop (because you know the exact number)</option>
+                <option value="while">A `while` loop</option>
             </select>
             <br>
             <button class="btn" onclick="checkAnswer()">Submit Answer</button>
@@ -128,9 +122,9 @@ print("Number of mangoes:", mangoes)
         </div>
 
         <div class="nav">
-            <a href="card2.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="card5.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
             <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
-            <a href="card4.html">Next Card <i class="fas fa-arrow-right"></i></a>
+            <a href="card7.html">Next Card <i class="fas fa-arrow-right"></i></a>
         </div>
 
     </div>
@@ -139,15 +133,15 @@ print("Number of mangoes:", mangoes)
         function checkAnswer() {
             const answer = document.getElementById('q1').value;
             const resultText = document.getElementById('quiz-result');
-            if (answer === 'name') {
+            if (answer === 'for') {
                 resultText.style.color = 'green';
-                resultText.innerHTML = "Excellent! 'name' is the variable holding the value 'Ramesh'. You're getting it!";
+                resultText.innerHTML = "Correct! A `for` loop is ideal when you know exactly how many times you need to repeat something.";
             } else if (answer === 'none') {
                 resultText.style.color = 'black';
                 resultText.innerHTML = "Please select an answer.";
             } else {
                 resultText.style.color = 'red';
-                resultText.innerHTML = "Not quite. Remember, the variable is the label on the jar, not what's inside. Try again!";
+                resultText.innerHTML = "Not quite. While a `while` loop could work, a `for` loop is better suited for a fixed number of repetitions. Try again!";
             }
         }
     </script>

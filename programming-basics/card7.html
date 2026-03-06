@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming Basics - Card 3: Variables and Data Types</title>
+    <title>Programming Basics - Card 7: Functions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
@@ -45,82 +45,83 @@
 <body>
 
     <div class="card">
-        <h1><i class="fas fa-box"></i> Card 3: Variables - Storing Information</h1>
+        <h1><i class="fas fa-cogs"></i> Card 7: Functions (Reusable Code)</h1>
 
-        <p>In programming, we need to store information. We use <strong>variables</strong> for this, which are like labeled jars. In a kitchen in Andhra, you have jars for 'Rice', 'Lentils', and 'Chilli Powder'. In programming, we have variables for names, ages, and so on.</p>
+        <p>A function is a block of organized, reusable code that performs a single, specific action. It's like having a recipe for a special dish. Instead of writing the recipe every time, you just refer to it by name.</p>
 
         <div class="storyboard">
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-tag"></i></div>
+                <div class="icon"><i class="fas fa-book"></i></div>
                 <div class="step-content">
-                    <h3>1. Creating a Variable</h3>
-                    <p><strong>Story:</strong> Let's create a variable to store a city name. The variable is the "jar," and the city name is what's inside.</p>
-                    <p><strong>The Code:</strong> <code>city = "Vijayawada"</code></p>
+                    <h3>1. What is a Function?</h3>
+                    <p><strong>Story:</strong> A function is a named set of instructions. You can use it again and again without rewriting the code. This makes your code cleaner and easier to manage.</p>
+                    <p><strong>Analogy:</strong> A recipe for making "Pesarattu." You follow the same steps every time you want to make it.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-font"></i></div>
+                <div class="icon"><i class="fas fa-code"></i></div>
                 <div class="step-content">
-                    <h3>2. Data Type: String (Text)</h3>
-                    <p><strong>Story:</strong> "Vijayawada" is text. In programming, text is called a <strong>String</strong>. It's always wrapped in quotes.</p>
-                    <p><strong>Analogy:</strong> The name written on the jar's label.</p>
+                    <h3>2. Defining a Function</h3>
+                    <p><strong>Story:</strong> You create a function using the `def` keyword, followed by the function's name and parentheses `()`. The code inside the function is indented.</p>
+                    <p><strong>The Code:</strong> <code>def greet(): print("Namaste, Andhra Pradesh!")</code></p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-sort-numeric-up"></i></div>
+                <div class="icon"><i class="fas fa-play-circle"></i></div>
                 <div class="step-content">
-                    <h3>3. Data Type: Integer (Number)</h3>
-                    <p><strong>Story:</strong> Let's store the number of mangoes from a farm. Numbers don't need quotes.</p>
-                    <p><strong>The Code:</strong> <code>mangoes = 150</code></p>
+                    <h3>3. Calling a Function</h3>
+                    <p><strong>Story:</strong> To use the function, you "call" it by writing its name followed by parentheses.</p>
+                    <p><strong>The Code:</strong> <code>greet()</code> would run the code inside the function and print "Namaste, Andhra Pradesh!".</p>
                 </div>
             </div>
-
+            
             <div class="story-step">
-                <div class="icon"><i class="fas fa-print"></i></div>
+                <div class="icon"><i class="fas fa-user-plus"></i></div>
                 <div class="step-content">
-                    <h3>4. Using Your Variables</h3>
-                    <p><strong>Story:</strong> Now you can use the jar's label (the variable name) to get what's inside.</p>
-                    <p><strong>The Code:</strong> <code>print("I live in", city)</code> will show "I live in Vijayawada".</p>
+                    <h3>4. Functions with Parameters</h3>
+                    <p><strong>Story:</strong> You can make functions more flexible by giving them information. These are called parameters.</p>
+                    <p><strong>The Code:</strong> <code>def greet_person(name): print("Namaste,", name)</code>. Then you can call it with `greet_person("Praveen")`.</p>
                 </div>
             </div>
 
         </div>
 
         <div class="code-example">
-            <h4>Python Code with Variables:</h4>
+            <h4>Python Code with Functions:</h4>
             <pre>
-# Storing text (a String)
-city = "Vijayawada"
-print("The city is:", city)
+# Define a function to calculate the area of a rectangle
+def calculate_area(length, width):
+  area = length * width
+  print("The area is:", area)
 
-# Storing a whole number (an Integer)
-mangoes = 150
-print("Number of mangoes:", mangoes)
+# Call the function with different values
+calculate_area(10, 5)
+calculate_area(20, 15)
             </pre>
         </div>
 
         <div class="terms-section">
             <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
             <ul>
-                <li><strong>Variable:</strong> A named container for storing data.</li>
-                <li><strong>Data Type:</strong> The type of data a variable holds (e.g., text or number).</li>
-                <li><strong>String:</strong> A data type for text. Must be in quotes (e.g., "Hello").</li>
-                <li><strong>Integer:</strong> A data type for whole numbers (e.g., 10, 50, -5).</li>
-                <li><strong>Assignment (=):</strong> The act of giving a value to a variable. The `=` sign is the assignment operator.</li>
+                <li><strong>Function:</strong> A named, reusable block of code that performs a specific task.</li>
+                <li><strong>Define:</strong> The process of creating a function using the `def` keyword.</li>
+                <li><strong>Call:</strong> The process of executing a function.</li>
+                <li><strong>Parameter:</strong> A variable listed inside the parentheses in the function definition, acting as a placeholder for a value.</li>
+                <li><strong>Argument:</strong> The actual value that is sent to the function when it is called.</li>
             </ul>
         </div>
 
         <div class="quiz-section">
             <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
-            <p>If you have the code <code>name = "Ramesh"</code>, what is the variable?</p>
+            <p>What is the main benefit of using a function?</p>
             <select id="q1">
                 <option value="none">-- Select an answer --</option>
-                <option value="name">name</option>
-                <option value="Ramesh">"Ramesh"</option>
-                <option value="equals">=</option>
+                <option value="reusability">You can reuse code without writing it again</option>
+                <option value="speed">It makes the computer run faster</option>
+                <option value="color">It changes the color of your code</option>
             </select>
             <br>
             <button class="btn" onclick="checkAnswer()">Submit Answer</button>
@@ -128,9 +129,8 @@ print("Number of mangoes:", mangoes)
         </div>
 
         <div class="nav">
-            <a href="card2.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="card6.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
             <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
-            <a href="card4.html">Next Card <i class="fas fa-arrow-right"></i></a>
         </div>
 
     </div>
@@ -139,15 +139,15 @@ print("Number of mangoes:", mangoes)
         function checkAnswer() {
             const answer = document.getElementById('q1').value;
             const resultText = document.getElementById('quiz-result');
-            if (answer === 'name') {
+            if (answer === 'reusability') {
                 resultText.style.color = 'green';
-                resultText.innerHTML = "Excellent! 'name' is the variable holding the value 'Ramesh'. You're getting it!";
+                resultText.innerHTML = "Correct! Functions are excellent for writing clean, reusable code.";
             } else if (answer === 'none') {
                 resultText.style.color = 'black';
                 resultText.innerHTML = "Please select an answer.";
             } else {
                 resultText.style.color = 'red';
-                resultText.innerHTML = "Not quite. Remember, the variable is the label on the jar, not what's inside. Try again!";
+                resultText.innerHTML = "Not quite. The primary advantage is that you don't have to repeat yourself. Try again!";
             }
         }
     </script>
