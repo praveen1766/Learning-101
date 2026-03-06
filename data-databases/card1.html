@@ -18,8 +18,7 @@
         .story-step:nth-child(2) { animation-delay: 1s; }
         .story-step:nth-child(3) { animation-delay: 1.5s; }
         @keyframes slideIn { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
-        .story-step .icon { font-size: 80px; color: #2563eb; width: 80px; text-align: center; animation: bounce 2s infinite; }
-        @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-10px); } 60% { transform: translateY(-5px); } }
+        .story-step .icon { font-size: 80px; color: #2563eb; width: 80px; text-align: center; }
         .step-content { flex: 1; }
         .step-content h3 { margin: 0 0 10px 0; color: #2563eb; }
         .step-content p { margin: 0; font-size: 0.95em; }
@@ -116,7 +115,6 @@
             if (answer === 'cabinet') {
                 resultText.style.color = 'green';
                 resultText.innerHTML = "Correct! A database is a digital filing cabinet. Well done!";
-                resultText.style.animation = 'bounce 1s';
             } else if (answer === 'none') {
                 resultText.style.color = 'black';
                 resultText.innerHTML = "Please select an answer.";

@@ -12,14 +12,14 @@
         h1 { color: #1e3a8a; margin: 0; }
         .intro { font-size: 1.2em; line-height: 1.6; color: #4b5563; margin: 20px 0; }
         .cards-section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 30px; }
-        .card-link { display: block; text-decoration: none; color: inherit; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 15px; transition: background 0.3s; }
-        .card-link:hover { background: #eff6ff; }
+        .card-link { display: block; text-decoration: none; color: inherit; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 15px; }
         .card-link h3 { margin: 0 0 10px 0; color: #2563eb; }
         .card-link p { margin: 0; color: #4b5563; }
         .cards-section details { margin-bottom: 20px; }
-        .cards-section summary { list-style: none; cursor: pointer; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; display: flex; align-items: center; gap: 15px; transition: background 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .cards-section summary:hover { background: #eff6ff; }
-        .cards-section summary i { color: #2563eb; font-size: 1.5em; }
+        .cards-section summary { display: flex; align-items: center; gap: 10px; padding: 15px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); cursor: pointer; list-style: none; }
+        .cards-section summary .icon { flex-shrink: 0; }
+        .cards-section summary .icon i { color: #2563eb; font-size: 1.2em; }
+        .cards-section summary .title { flex: 1; font-weight: bold; color: #1e3a8a; }
         .cards-section summary::-webkit-details-marker { display: none; }
         .cards-section details[open] summary { background: #eff6ff; }
         .cards-section details div { padding-left: 20px; margin-top: 15px; }
@@ -37,7 +37,7 @@
             <h2>Your Learning Journey</h2>
 
             <details>
-                <summary><i class="fas fa-computer-mouse"></i> Basic Computer Skills</summary>
+                <summary><div class="icon"><i class="fas fa-computer-mouse"></i></div><div class="title">Basic Computer Skills</div></summary>
                 <a href="basic-computer-skills/card1.html" class="card-link">
                     <h4><i class="fas fa-play-circle"></i> Card 1: What is a Computer?</h4>
                     <p>Learn the basic parts of a computer with Andhra Pradesh examples. Understand monitor, keyboard, mouse, and CPU.</p>
@@ -50,7 +50,7 @@
             </details>
 
             <details>
-                <summary><i class="fas fa-wifi"></i> Internet Fundamentals</summary>
+                <summary><div class="icon"><i class="fas fa-wifi"></i></div><div class="title">Internet Fundamentals</div></summary>
                 <a href="internet-fundamentals/card1.html" class="card-link">
                     <h4><i class="fas fa-play-circle"></i> Card 1: How IT Moves the World</h4>
                     <p>Understand Clients, Networks, and Servers using the APSRTC bus booking app.</p>
@@ -63,7 +63,7 @@
             </details>
 
             <details>
-                <summary><i class="fas fa-code"></i> Programming Basics</summary>
+                <summary><div class="icon"><i class="fas fa-code"></i></div><div class="title">Programming Basics</div></summary>
                 <a href="programming-basics/card1.html" class="card-link">
                     <h4><i class="fas fa-play-circle"></i> Card 1: What is Programming?</h4>
                     <p>Learn what programming is with Andhra Pradesh examples. Understand code, languages, and debugging.</p>
@@ -76,7 +76,7 @@
             </details>
 
             <details>
-                <summary><i class="fas fa-database"></i> Data and Databases</summary>
+                <summary><div class="icon"><i class="fas fa-database"></i></div><div class="title">Data and Databases</div></summary>
                 <a href="data-databases/card1.html" class="card-link">
                     <h4><i class="fas fa-play-circle"></i> Card 1: What is a Database?</h4>
                     <p>Learn about storing and organizing data with Andhra Pradesh ration card examples.</p>
@@ -89,7 +89,7 @@
             </details>
 
             <details>
-                <summary><i class="fas fa-brain"></i> AI Basics</summary>
+                <summary><div class="icon"><i class="fas fa-brain"></i></div><div class="title">AI Basics</div></summary>
                 <a href="ai-basics/card1.html" class="card-link">
                     <h4><i class="fas fa-play-circle"></i> Card 1: What is AI?</h4>
                     <p>Discover Artificial Intelligence with local Andhra Pradesh farming examples.</p>
@@ -102,7 +102,7 @@
             </details>
 
             <details>
-                <summary><i class="fas fa-cogs"></i> AI Tools and Applications</summary>
+                <summary><div class="icon"><i class="fas fa-cogs"></i></div><div class="title">AI Tools and Applications</div></summary>
                 <a href="ai-tools/card1.html" class="card-link">
                     <h4><i class="fas fa-play-circle"></i> Card 1: Introduction to AI Tools</h4>
                     <p>Learn about AI tools like chatbots and data analysis with Andhra Pradesh examples.</p>
@@ -115,7 +115,7 @@
             </details>
 
             <details>
-                <summary><i class="fas fa-user-tie"></i> Job Preparation</summary>
+                <summary><div class="icon"><i class="fas fa-user-tie"></i></div><div class="title">Job Preparation</div></summary>
                 <a href="job-prep/card1.html" class="card-link">
                     <h4><i class="fas fa-play-circle"></i> Card 1: Getting Started with IT Jobs</h4>
                     <p>Learn to build a resume, find jobs, and prepare for interviews in Andhra Pradesh.</p>
