@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Fundamentals - Card 2: How the Internet Works</title>
+    <title>Data and Databases - Card 3: SQL vs. NoSQL</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
@@ -41,36 +41,36 @@
 <body>
 
     <div class="card">
-        <h1><i class="fas fa-globe"></i> Card 2: How the Internet Works</h1>
+        <h1><i class="fas fa-table"></i><i class="fas fa-file-alt"></i> Card 3: SQL vs. NoSQL Databases</h1>
 
-        <p>The internet is like a huge network of roads connecting villages. In Andhra Pradesh, it's like the highways linking Hyderabad to Tirupati – data travels fast!</p>
+        <p>There are different types of databases, just like there are different ways to store things. Imagine comparing a tidy, organized library with a big box of assorted documents. This is like the difference between SQL and NoSQL databases.</p>
 
         <div class="storyboard">
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-wifi"></i></div>
+                <div class="icon"><i class="fas fa-table"></i></div>
                 <div class="step-content">
-                    <h3>Connecting Devices</h3>
-                    <p><strong>Story:</strong> Your phone connects via WiFi or mobile data to the internet.</p>
-                    <p><strong>Fun Fact:</strong> In Andhra Pradesh, even remote areas get internet via towers.</p>
+                    <h3>SQL: The Organized Library</h3>
+                    <p><strong>Story:</strong> SQL databases use tables with fixed columns and rows. Everything is neat and predictable. Think of a bank's records, where every transaction has a date, amount, and account number.</p>
+                    <p><strong>Analogy:</strong> A librarian in a Visakhapatnam library who needs every book to have a specific card and be in the right place.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-road"></i></div>
+                <div class="icon"><i class="fas fa-folder-open"></i></div>
                 <div class="step-content">
-                    <h3>Data Travels</h3>
-                    <p><strong>Story:</strong> Information goes through cables and satellites to reach websites.</p>
-                    <p><strong>Fun Fact:</strong> Undersea cables connect India to the world, like rivers.</p>
+                    <h3>NoSQL: The Flexible Folder</h3>
+                    <p><strong>Story:</strong> NoSQL databases are like a folder where you can store anything—a photo, a note, a list. Each item can have a different structure. This is great for data that is not uniform, like posts on social media.</p>
+                    <p><strong>Analogy:</strong> A farmer's notebook with drawings, notes about weather, and lists of crop prices all in one place.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-server"></i></div>
+                <div class="icon"><i class="fas fa-question"></i></div>
                 <div class="step-content">
-                    <h3>Websites and Servers</h3>
-                    <p><strong>Story:</strong> Websites are stored on servers. You request a page, server sends it back.</p>
-                    <p><strong>Fun Fact:</strong> Andhra Pradesh government sites run on servers in Hyderabad.</p>
+                    <h3>When to Use Each?</h3>
+                    <p><strong>SQL:</strong> Best for applications that need reliability and consistency, like banking, e-commerce stores, or government records (like the Aadhaar system).</p>
+                    <p><strong>NoSQL:</strong> Best for big applications with lots of users and varied data, like social media apps, or tracking data from many farm sensors.</p>
                 </div>
             </div>
 
@@ -79,23 +79,21 @@
         <div class="terms-section">
             <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
             <ul>
-                <li><strong>WiFi:</strong> Wireless way to connect to the internet.</li>
-                <li><strong>Browser:</strong> App like Chrome to view websites.</li>
-                <li><strong>URL:</strong> Address of a website, like https://example.com.</li>
-                <li><strong>Bandwidth:</strong> How fast data travels, like road width.</li>
-                <li><strong>IP Address:</strong> Unique number for each device on the internet.</li>
+                <li><strong>SQL (Structured Query Language):</strong> The language for managing data in structured, table-based databases.</li>
+                <li><strong>NoSQL (Not Only SQL):</strong> A type of database that is more flexible and does not use tables with a fixed structure.</li>
+                <li><strong>Schema:</strong> The blueprint or structure of a database. SQL databases have a strict schema.</li>
+                <li><strong>Relational Database:</strong> Another name for a SQL database, as it stores data in tables with defined relationships.</li>
+                <li><strong>Non-relational Database:</strong> Another name for a NoSQL database.</li>
             </ul>
         </div>
 
         <div class="quiz-section">
             <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
-            <p>What connects your phone to the internet?</p>
+            <p>Which type of database would be better for storing all the different kinds of posts from a social media app?</p>
             <select id="q1">
                 <option value="none">-- Select an answer --</option>
-                <option value="wifi">WiFi or mobile data</option>
-                <option value="tv">Television cable</option>
-                <option value="fan">Electric fan</option>
-                <option value="book">A book</option>
+                <option value="sql">SQL (The Organized Library)</option>
+                <option value="nosql">NoSQL (The Flexible Folder)</option>
             </select>
             <br>
             <button class="btn" onclick="checkAnswer()">Submit Answer</button>
@@ -103,9 +101,8 @@
         </div>
 
         <div class="nav">
-            <a href="card1.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="card2.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
             <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
-            <a href="card3.html">Next Card <i class="fas fa-arrow-right"></i></a>
         </div>
 
     </div>
@@ -114,15 +111,15 @@
         function checkAnswer() {
             const answer = document.getElementById('q1').value;
             const resultText = document.getElementById('quiz-result');
-            if (answer === 'wifi') {
+            if (answer === 'nosql') {
                 resultText.style.color = 'green';
-                resultText.innerHTML = "Correct! WiFi or mobile data connects you to the internet.";
+                resultText.innerHTML = "Correct! NoSQL is perfect for flexible, varied data like social media posts.";
             } else if (answer === 'none') {
                 resultText.style.color = 'black';
                 resultText.innerHTML = "Please select an answer.";
             } else {
                 resultText.style.color = 'red';
-                resultText.innerHTML = "Not quite. WiFi is the wireless connection. Try again!";
+                resultText.innerHTML = "Not quite. SQL databases require a fixed structure, which is not ideal for varied social media posts. Think more flexibly!";
             }
         }
     </script>

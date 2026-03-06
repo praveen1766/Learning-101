@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Fundamentals - Card 2: How the Internet Works</title>
+    <title>AI Basics - Card 3: Types of Machine Learning</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
@@ -41,36 +41,36 @@
 <body>
 
     <div class="card">
-        <h1><i class="fas fa-globe"></i> Card 2: How the Internet Works</h1>
+        <h1><i class="fas fa-chalkboard-teacher"></i> Card 3: Types of Machine Learning</h1>
 
-        <p>The internet is like a huge network of roads connecting villages. In Andhra Pradesh, it's like the highways linking Hyderabad to Tirupati – data travels fast!</p>
+        <p>Machine learning has different styles of learning, just like students. Some learn with a teacher, and some learn by finding patterns on their own. Let's explore the two main types: Supervised and Unsupervised Learning.</p>
 
         <div class="storyboard">
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-wifi"></i></div>
+                <div class="icon"><i class="fas fa-user-graduate"></i></div>
                 <div class="step-content">
-                    <h3>Connecting Devices</h3>
-                    <p><strong>Story:</strong> Your phone connects via WiFi or mobile data to the internet.</p>
-                    <p><strong>Fun Fact:</strong> In Andhra Pradesh, even remote areas get internet via towers.</p>
+                    <h3>Supervised Learning: Learning with a Teacher</h3>
+                    <p><strong>Story:</strong> In Supervised Learning, the AI is given labeled data. We show it pictures of mangoes and label them "ripe" or "not ripe." After seeing enough examples, it can predict if a new mango is ripe.</p>
+                    <p><strong>Analogy:</strong> A farming expert in an Andhra village teaching a new farmer which crops are ready to harvest.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-road"></i></div>
+                <div class="icon"><i class="fas fa-lightbulb"></i></div>
                 <div class="step-content">
-                    <h3>Data Travels</h3>
-                    <p><strong>Story:</strong> Information goes through cables and satellites to reach websites.</p>
-                    <p><strong>Fun Fact:</strong> Undersea cables connect India to the world, like rivers.</p>
+                    <h3>Unsupervised Learning: Learning on Your Own</h3>
+                    <p><strong>Story:</strong> In Unsupervised Learning, the AI gets data with no labels. It has to find patterns by itself. For example, it could group customers at a market in Guntur based on what they buy, without being told what the groups should be.</p>
+                    <p><strong>Analogy:</strong> A shopkeeper noticing that customers who buy rice also tend to buy lentils, and grouping them together.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-server"></i></div>
+                <div class="icon"><i class="fas fa-cogs"></i></div>
                 <div class="step-content">
-                    <h3>Websites and Servers</h3>
-                    <p><strong>Story:</strong> Websites are stored on servers. You request a page, server sends it back.</p>
-                    <p><strong>Fun Fact:</strong> Andhra Pradesh government sites run on servers in Hyderabad.</p>
+                    <h3>Real-World Examples</h3>
+                    <p><strong>Supervised:</strong> Predicting the price of a house based on its size and location, using past sales data.</p>
+                    <p><strong>Unsupervised:</strong> Recommending movies on a streaming service by finding groups of users with similar tastes.</p>
                 </div>
             </div>
 
@@ -79,23 +79,21 @@
         <div class="terms-section">
             <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
             <ul>
-                <li><strong>WiFi:</strong> Wireless way to connect to the internet.</li>
-                <li><strong>Browser:</strong> App like Chrome to view websites.</li>
-                <li><strong>URL:</strong> Address of a website, like https://example.com.</li>
-                <li><strong>Bandwidth:</strong> How fast data travels, like road width.</li>
-                <li><strong>IP Address:</strong> Unique number for each device on the internet.</li>
+                <li><strong>Supervised Learning:</strong> Training an AI model with labeled data (data with answers).</li>
+                <li><strong>Unsupervised Learning:</strong> Training an AI model with unlabeled data to find hidden patterns.</li>
+                <li><strong>Labeled Data:</strong> Data that has been tagged with a correct answer or label (e.g., photos of cats labeled "cat").</li>
+                <li><strong>Unlabeled Data:</strong> Data without any tags or answers.</li>
+                <li><strong>Clustering:</strong> A common unsupervised learning task of grouping similar data points together.</li>
             </ul>
         </div>
 
         <div class="quiz-section">
             <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
-            <p>What connects your phone to the internet?</p>
+            <p>If you teach an AI by showing it photos of cats and dogs that are already labeled, what type of learning is this?</p>
             <select id="q1">
                 <option value="none">-- Select an answer --</option>
-                <option value="wifi">WiFi or mobile data</option>
-                <option value="tv">Television cable</option>
-                <option value="fan">Electric fan</option>
-                <option value="book">A book</option>
+                <option value="supervised">Supervised Learning</option>
+                <option value="unsupervised">Unsupervised Learning</option>
             </select>
             <br>
             <button class="btn" onclick="checkAnswer()">Submit Answer</button>
@@ -103,9 +101,8 @@
         </div>
 
         <div class="nav">
-            <a href="card1.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="card2.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
             <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
-            <a href="card3.html">Next Card <i class="fas fa-arrow-right"></i></a>
         </div>
 
     </div>
@@ -114,15 +111,15 @@
         function checkAnswer() {
             const answer = document.getElementById('q1').value;
             const resultText = document.getElementById('quiz-result');
-            if (answer === 'wifi') {
+            if (answer === 'supervised') {
                 resultText.style.color = 'green';
-                resultText.innerHTML = "Correct! WiFi or mobile data connects you to the internet.";
+                resultText.innerHTML = "Correct! Using labeled data is the key to Supervised Learning.";
             } else if (answer === 'none') {
                 resultText.style.color = 'black';
                 resultText.innerHTML = "Please select an answer.";
             } else {
                 resultText.style.color = 'red';
-                resultText.innerHTML = "Not quite. WiFi is the wireless connection. Try again!";
+                resultText.innerHTML = "Not quite. When the data has labels (answers), it's like having a teacher. Think again!";
             }
         }
     </script>

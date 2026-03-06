@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Fundamentals - Card 2: How the Internet Works</title>
+    <title>AI Tools and Applications - Card 3: Creating Images with AI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
@@ -41,36 +41,36 @@
 <body>
 
     <div class="card">
-        <h1><i class="fas fa-globe"></i> Card 2: How the Internet Works</h1>
+        <h1><i class="fas fa-paint-brush"></i> Card 3: Creating Images with AI</h1>
 
-        <p>The internet is like a huge network of roads connecting villages. In Andhra Pradesh, it's like the highways linking Hyderabad to Tirupati – data travels fast!</p>
+        <p>Did you know AI can create images from just text? It's like describing a scene to an artist who then paints it for you. This is called AI Image Generation and it's a fun and powerful tool.</p>
 
         <div class="storyboard">
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-wifi"></i></div>
+                <div class="icon"><i class="fas fa-file-alt"></i></div>
                 <div class="step-content">
-                    <h3>Connecting Devices</h3>
-                    <p><strong>Story:</strong> Your phone connects via WiFi or mobile data to the internet.</p>
-                    <p><strong>Fun Fact:</strong> In Andhra Pradesh, even remote areas get internet via towers.</p>
+                    <h3>1. Writing a Prompt</h3>
+                    <p><strong>Story:</strong> You start by writing a description of the image you want. This is called a "prompt." The more detailed your prompt, the better the result.</p>
+                    <p><strong>Example Prompt:</strong> "A colorful painting of a peacock dancing in a mango grove in Andhra Pradesh."</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-road"></i></div>
+                <div class="icon"><i class="fas fa-magic"></i></div>
                 <div class="step-content">
-                    <h3>Data Travels</h3>
-                    <p><strong>Story:</strong> Information goes through cables and satellites to reach websites.</p>
-                    <p><strong>Fun Fact:</strong> Undersea cables connect India to the world, like rivers.</p>
+                    <h3>2. The AI Creates the Image</h3>
+                    <p><strong>Story:</strong> The AI tool takes your prompt and generates a completely new image based on your description. It understands objects, colors, and styles from your words.</p>
+                    <p><strong>Fun Fact:</strong> Some AI tools can create images in the style of famous artists!</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-server"></i></div>
+                <div class="icon"><i class="fas fa-tools"></i></div>
                 <div class="step-content">
-                    <h3>Websites and Servers</h3>
-                    <p><strong>Story:</strong> Websites are stored on servers. You request a page, server sends it back.</p>
-                    <p><strong>Fun Fact:</strong> Andhra Pradesh government sites run on servers in Hyderabad.</p>
+                    <h3>3. Popular AI Image Tools</h3>
+                    <p><strong>Story:</strong> There are many tools you can try for free to create your own AI images. Some popular ones are <strong>Midjourney</strong>, <strong>DALL-E 2</strong>, and <strong>Stable Diffusion</strong>.</p>
+                    <p><strong>Use Case:</strong> You can use these to create a logo for a new shop in your village or just make beautiful art for fun.</p>
                 </div>
             </div>
 
@@ -79,23 +79,22 @@
         <div class="terms-section">
             <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
             <ul>
-                <li><strong>WiFi:</strong> Wireless way to connect to the internet.</li>
-                <li><strong>Browser:</strong> App like Chrome to view websites.</li>
-                <li><strong>URL:</strong> Address of a website, like https://example.com.</li>
-                <li><strong>Bandwidth:</strong> How fast data travels, like road width.</li>
-                <li><strong>IP Address:</strong> Unique number for each device on the internet.</li>
+                <li><strong>Image Generation:</strong> The process of creating images from text descriptions using AI.</li>
+                <li><strong>Prompt:</strong> The text you write to describe the image you want the AI to create.</li>
+                <li><strong>Generative AI:</strong> A type of AI that can create new content, like text, images, or music.</li>
+                <li><strong>DALL-E 2 & Midjourney:</strong> Popular and powerful AI tools for generating images from prompts.</li>
+                <li><strong>Diffusion Model:</strong> The technology behind many modern AI image generators.</li>
             </ul>
         </div>
 
         <div class="quiz-section">
             <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
-            <p>What connects your phone to the internet?</p>
+            <p>What is the text description you give to an AI image generator called?</p>
             <select id="q1">
                 <option value="none">-- Select an answer --</option>
-                <option value="wifi">WiFi or mobile data</option>
-                <option value="tv">Television cable</option>
-                <option value="fan">Electric fan</option>
-                <option value="book">A book</option>
+                <option value="prompt">A Prompt</option>
+                <option value="recipe">A Recipe</option>
+                <option value="letter">A Letter</option>
             </select>
             <br>
             <button class="btn" onclick="checkAnswer()">Submit Answer</button>
@@ -103,9 +102,8 @@
         </div>
 
         <div class="nav">
-            <a href="card1.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="card2.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
             <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
-            <a href="card3.html">Next Card <i class="fas fa-arrow-right"></i></a>
         </div>
 
     </div>
@@ -114,15 +112,15 @@
         function checkAnswer() {
             const answer = document.getElementById('q1').value;
             const resultText = document.getElementById('quiz-result');
-            if (answer === 'wifi') {
+            if (answer === 'prompt') {
                 resultText.style.color = 'green';
-                resultText.innerHTML = "Correct! WiFi or mobile data connects you to the internet.";
+                resultText.innerHTML = "Correct! The prompt is the instruction you give to the AI. Well done!";
             } else if (answer === 'none') {
                 resultText.style.color = 'black';
                 resultText.innerHTML = "Please select an answer.";
             } else {
                 resultText.style.color = 'red';
-                resultText.innerHTML = "Not quite. WiFi is the wireless connection. Try again!";
+                resultText.innerHTML = "Not quite. While it's a type of instruction, in the world of AI image generation, it's called a prompt. Try again!";
             }
         }
     </script>

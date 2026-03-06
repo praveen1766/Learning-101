@@ -9,12 +9,12 @@ This is a static HTML website hosted on GitHub Pages, designed as an interactive
 - **Main File:** `index.html` - Portal homepage with expandable category sections
 - **Sections/Folders:**
   - `basic-computer-skills/` - Cards 1, 2, 3
-  - `internet-fundamentals/` - Cards 1, 2
-  - `programming-basics/` - Cards 1, 2
-  - `data-databases/` - Cards 1, 2
-  - `ai-basics/` - Cards 1, 2
-  - `ai-tools/` - Cards 1, 2
-  - `job-prep/` - Cards 1, 2
+  - `internet-fundamentals/` - Cards 1, 2, 3
+  - `programming-basics/` - Cards 1, 2, 3
+  - `data-databases/` - Cards 1, 2, 3
+  - `ai-basics/` - Cards 1, 2, 3
+  - `ai-tools/` - Cards 1, 2, 3
+  - `job-prep/` - Cards 1, 2, 3
 
 ## Design Guidelines
 ### Colors
@@ -31,7 +31,7 @@ This is a static HTML website hosted on GitHub Pages, designed as an interactive
 
 ### Layout
 - Card-based design with white backgrounds, border-radius 12px, box-shadow 0 4px 12px rgba(0,0,0,0.1)
-- Max-width 800px for cards, centered with flex
+- Max-width: 800px for cards, centered with flex
 - Animations: fadeIn for cards, slideIn for storyboard steps
 - Icons: Font Awesome 6, size 48px, color #2563eb, width 70px container
 
@@ -126,8 +126,8 @@ Each card follows this consistent format:
 9. **Commit & Push:** Use descriptive commit messages including the updated gemini.md
 
 ## Current Progress & Next Steps
-- **Completed:** Basic Computer Skills Cards 1-3
-- **Next:** Add Card 3 to Internet Fundamentals, then continue sequentially through sections
+- **Completed:** All sections now have Card 3.
+- **Next:** Continue sequentially through sections, adding Card 4.
 - **Goal:** Build comprehensive progressive learning path
 
 ## Important Notes
@@ -139,5 +139,4 @@ Each card follows this consistent format:
 - Keep animations subtle and non-distracting
 - Follow the established file naming: `section/cardX.html`
 
-This ensures Gemini can generate new cards that seamlessly integrate with the existing design and content style.</content>
-<parameter name="filePath">/Users/praveenmandadi/development/Learning-101/gemini.md
+This ensures Gemini can generate new cards that seamlessly integrate with the existing design and content style.

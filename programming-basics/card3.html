@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming Basics - Card 2: Writing Your First Program</title>
+    <title>Programming Basics - Card 3: Variables and Data Types</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
@@ -45,78 +45,82 @@
 <body>
 
     <div class="card">
-        <h1><i class="fas fa-code"></i> Card 2: Writing Your First Program</h1>
+        <h1><i class="fas fa-box"></i> Card 3: Variables - Storing Information</h1>
 
-        <p>Now that you know what programming is, let's write a simple program. It's like writing a short note to a friend. We'll use Python, easy like Telugu.</p>
+        <p>In programming, we need to store information. We use <strong>variables</strong> for this, which are like labeled jars. In a kitchen in Andhra, you have jars for 'Rice', 'Lentils', and 'Chilli Powder'. In programming, we have variables for names, ages, and so on.</p>
 
         <div class="storyboard">
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-edit"></i></div>
+                <div class="icon"><i class="fas fa-tag"></i></div>
                 <div class="step-content">
-                    <h3>Open a Text Editor</h3>
-                    <p><strong>Story:</strong> Use Notepad or any simple editor. Type your code there.</p>
-                    <p><strong>Fun Fact:</strong> In Andhra Pradesh, start with free online editors if no computer.</p>
+                    <h3>1. Creating a Variable</h3>
+                    <p><strong>Story:</strong> Let's create a variable to store a city name. The variable is the "jar," and the city name is what's inside.</p>
+                    <p><strong>The Code:</strong> <code>city = "Vijayawada"</code></p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-keyboard"></i></div>
+                <div class="icon"><i class="fas fa-font"></i></div>
                 <div class="step-content">
-                    <h3>Type the Code</h3>
-                    <p><strong>Story:</strong> Write: print("Hello, Andhra Pradesh!")</p>
-                    <p><strong>Fun Fact:</strong> "Print" means show on screen, like displaying a message.</p>
+                    <h3>2. Data Type: String (Text)</h3>
+                    <p><strong>Story:</strong> "Vijayawada" is text. In programming, text is called a <strong>String</strong>. It's always wrapped in quotes.</p>
+                    <p><strong>Analogy:</strong> The name written on the jar's label.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-play"></i></div>
+                <div class="icon"><i class="fas fa-sort-numeric-up"></i></div>
                 <div class="step-content">
-                    <h3>Run the Program</h3>
-                    <p><strong>Story:</strong> Save as hello.py, then run with Python. It shows "Hello, Andhra Pradesh!"</p>
-                    <p><strong>Fun Fact:</strong> Like sending a greeting to the whole state!</p>
+                    <h3>3. Data Type: Integer (Number)</h3>
+                    <p><strong>Story:</strong> Let's store the number of mangoes from a farm. Numbers don't need quotes.</p>
+                    <p><strong>The Code:</strong> <code>mangoes = 150</code></p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-plus"></i></div>
+                <div class="icon"><i class="fas fa-print"></i></div>
                 <div class="step-content">
-                    <h3>Add More</h3>
-                    <p><strong>Story:</strong> Try: print("I am learning programming!")</p>
-                    <p><strong>Fun Fact:</strong> Each line is a step in your recipe.</p>
+                    <h3>4. Using Your Variables</h3>
+                    <p><strong>Story:</strong> Now you can use the jar's label (the variable name) to get what's inside.</p>
+                    <p><strong>The Code:</strong> <code>print("I live in", city)</code> will show "I live in Vijayawada".</p>
                 </div>
             </div>
 
         </div>
 
         <div class="code-example">
-            <h4>Your First Python Program:</h4>
+            <h4>Python Code with Variables:</h4>
             <pre>
-print("Hello, Andhra Pradesh!")
-print("I am learning programming!")
+# Storing text (a String)
+city = "Vijayawada"
+print("The city is:", city)
+
+# Storing a whole number (an Integer)
+mangoes = 150
+print("Number of mangoes:", mangoes)
             </pre>
         </div>
 
         <div class="terms-section">
             <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
             <ul>
-                <li><strong>Text Editor:</strong> A program to write and edit code, like Notepad.</li>
-                <li><strong>Print:</strong> A command to display text on the screen.</li>
-                <li><strong>Run/Execute:</strong> Making the computer follow the code.</li>
-                <li><strong>.py File:</strong> A Python file extension, like .doc for Word.</li>
-                <li><strong>Syntax:</strong> The rules for writing code correctly.</li>
+                <li><strong>Variable:</strong> A named container for storing data.</li>
+                <li><strong>Data Type:</strong> The type of data a variable holds (e.g., text or number).</li>
+                <li><strong>String:</strong> A data type for text. Must be in quotes (e.g., "Hello").</li>
+                <li><strong>Integer:</strong> A data type for whole numbers (e.g., 10, 50, -5).</li>
+                <li><strong>Assignment (=):</strong> The act of giving a value to a variable. The `=` sign is the assignment operator.</li>
             </ul>
         </div>
 
         <div class="quiz-section">
             <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
-            <p>What does 'print' do in Python?</p>
+            <p>If you have the code <code>name = "Ramesh"</code>, what is the variable?</p>
             <select id="q1">
                 <option value="none">-- Select an answer --</option>
-                <option value="display">Displays text on the screen</option>
-                <option value="printpaper">Prints on paper</option>
-                <option value="calculate">Does math</option>
-                <option value="dance">Makes the computer dance</option>
+                <option value="name">name</option>
+                <option value="Ramesh">"Ramesh"</option>
+                <option value="equals">=</option>
             </select>
             <br>
             <button class="btn" onclick="checkAnswer()">Submit Answer</button>
@@ -124,9 +128,8 @@ print("I am learning programming!")
         </div>
 
         <div class="nav">
-            <a href="card1.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="card2.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
             <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
-            <a href="card3.html">Next Card <i class="fas fa-arrow-right"></i></a>
         </div>
 
     </div>
@@ -135,15 +138,15 @@ print("I am learning programming!")
         function checkAnswer() {
             const answer = document.getElementById('q1').value;
             const resultText = document.getElementById('quiz-result');
-            if (answer === 'display') {
+            if (answer === 'name') {
                 resultText.style.color = 'green';
-                resultText.innerHTML = "Correct! Print shows text on the screen. You're coding!";
+                resultText.innerHTML = "Excellent! 'name' is the variable holding the value 'Ramesh'. You're getting it!";
             } else if (answer === 'none') {
                 resultText.style.color = 'black';
                 resultText.innerHTML = "Please select an answer.";
             } else {
                 resultText.style.color = 'red';
-                resultText.innerHTML = "Not quite. Print is for displaying messages. Try again!";
+                resultText.innerHTML = "Not quite. Remember, the variable is the label on the jar, not what's inside. Try again!";
             }
         }
     </script>

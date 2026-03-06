@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Fundamentals - Card 2: How the Internet Works</title>
+    <title>Internet Fundamentals - Card 3: What is a Website?</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
@@ -41,36 +41,36 @@
 <body>
 
     <div class="card">
-        <h1><i class="fas fa-globe"></i> Card 2: How the Internet Works</h1>
+        <h1><i class="fas fa-file-code"></i> Card 3: What is a Website?</h1>
 
-        <p>The internet is like a huge network of roads connecting villages. In Andhra Pradesh, it's like the highways linking Hyderabad to Tirupati – data travels fast!</p>
+        <p>A website is like a house built for the internet. Imagine building a new house in a village near Visakhapatnam. It has a structure, it has decorations, and it has working things like lights and fans. Websites are very similar!</p>
 
         <div class="storyboard">
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-wifi"></i></div>
+                <div class="icon"><i class="fab fa-html5"></i></div>
                 <div class="step-content">
-                    <h3>Connecting Devices</h3>
-                    <p><strong>Story:</strong> Your phone connects via WiFi or mobile data to the internet.</p>
-                    <p><strong>Fun Fact:</strong> In Andhra Pradesh, even remote areas get internet via towers.</p>
+                    <h3>HTML: The Structure</h3>
+                    <p><strong>Story:</strong> HTML is like the bricks, cement, and layout of the house. It defines the rooms, the doors, and the windows. It gives the website its basic shape.</p>
+                    <p><strong>Analogy:</strong> The basic plan of the house is the HTML.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-road"></i></div>
+                <div class="icon"><i class="fab fa-css3-alt"></i></div>
                 <div class="step-content">
-                    <h3>Data Travels</h3>
-                    <p><strong>Story:</strong> Information goes through cables and satellites to reach websites.</p>
-                    <p><strong>Fun Fact:</strong> Undersea cables connect India to the world, like rivers.</p>
+                    <h3>CSS: The Decoration</h3>
+                    <p><strong>Story:</strong> CSS is like painting the walls, choosing the color of the curtains, and arranging the furniture. It makes the house look beautiful and stylish.</p>
+                    <p><strong>Analogy:</strong> The beautiful rangoli at the entrance is the CSS.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-server"></i></div>
+                <div class="icon"><i class="fab fa-js"></i></div>
                 <div class="step-content">
-                    <h3>Websites and Servers</h3>
-                    <p><strong>Story:</strong> Websites are stored on servers. You request a page, server sends it back.</p>
-                    <p><strong>Fun Fact:</strong> Andhra Pradesh government sites run on servers in Hyderabad.</p>
+                    <h3>JavaScript: The Interactivity</h3>
+                    <p><strong>Story:</strong> JavaScript is like the electrical wiring. It makes things work! When you flip a switch, the light turns on. On a website, when you click a button, something happens.</p>
+                    <p><strong>Analogy:</strong> The switch for the fan is the JavaScript.</p>
                 </div>
             </div>
 
@@ -79,23 +79,22 @@
         <div class="terms-section">
             <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
             <ul>
-                <li><strong>WiFi:</strong> Wireless way to connect to the internet.</li>
-                <li><strong>Browser:</strong> App like Chrome to view websites.</li>
-                <li><strong>URL:</strong> Address of a website, like https://example.com.</li>
-                <li><strong>Bandwidth:</strong> How fast data travels, like road width.</li>
-                <li><strong>IP Address:</strong> Unique number for each device on the internet.</li>
+                <li><strong>HTML (HyperText Markup Language):</strong> The standard language for creating web pages.</li>
+                <li><strong>CSS (Cascading Style Sheets):</strong> The language for styling the visual presentation of a web page.</li>
+                <li><strong>JavaScript:</strong> A programming language that enables interactive web pages.</li>
+                <li><strong>Frontend:</strong> What you see and interact with in your browser (the house). Made with HTML, CSS, and JS.</li>
+                <li><strong>Backend:</strong> The server, database, and application logic that you don't see (the power station and water supply).</li>
             </ul>
         </div>
 
         <div class="quiz-section">
             <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
-            <p>What connects your phone to the internet?</p>
+            <p>Which technology is used to give a website its color and style?</p>
             <select id="q1">
                 <option value="none">-- Select an answer --</option>
-                <option value="wifi">WiFi or mobile data</option>
-                <option value="tv">Television cable</option>
-                <option value="fan">Electric fan</option>
-                <option value="book">A book</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JavaScript</option>
             </select>
             <br>
             <button class="btn" onclick="checkAnswer()">Submit Answer</button>
@@ -103,9 +102,8 @@
         </div>
 
         <div class="nav">
-            <a href="card1.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="card2.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
             <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
-            <a href="card3.html">Next Card <i class="fas fa-arrow-right"></i></a>
         </div>
 
     </div>
@@ -114,15 +112,15 @@
         function checkAnswer() {
             const answer = document.getElementById('q1').value;
             const resultText = document.getElementById('quiz-result');
-            if (answer === 'wifi') {
+            if (answer === 'css') {
                 resultText.style.color = 'green';
-                resultText.innerHTML = "Correct! WiFi or mobile data connects you to the internet.";
+                resultText.innerHTML = "Correct! CSS is used for styling and making the website look good.";
             } else if (answer === 'none') {
                 resultText.style.color = 'black';
                 resultText.innerHTML = "Please select an answer.";
             } else {
                 resultText.style.color = 'red';
-                resultText.innerHTML = "Not quite. WiFi is the wireless connection. Try again!";
+                resultText.innerHTML = "Not quite. Remember, CSS is like the paint and decorations. Try again!";
             }
         }
     </script>
