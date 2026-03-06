@@ -24,10 +24,14 @@
         .cards-section details[open] summary { background: #eff6ff; }
         .cards-section details div { padding-left: 20px; margin-top: 15px; }
         .cards-section h2 { color: #1e3a8a; margin-top: 0; }
+        .cards-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
         .courses-section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .courses-section h2 { color: #1e3a8a; margin-top: 0; }
         ol { padding-left: 20px; }
         li { margin-bottom: 15px; }
+        .cards-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .btn { display: inline-block; padding: 10px 20px; background: #2563eb; color: white; text-decoration: none; border-radius: 6px; cursor: pointer; border: none; font-size: 1em; transition: background 0.3s; }
+        .btn:hover { background: #1d4ed8; }
     </style>
 </head>
 <body>
@@ -39,7 +43,10 @@
         </header>
 
         <section class="cards-section">
-            <h2>Your Learning Journey</h2>
+            <div class="cards-header">
+                <h2>Your Learning Journey</h2>
+                <button id="toggle-all" class="btn">Expand All</button>
+            </div>
 
             <details>
                 <summary><div class="icon"><i class="fas fa-computer-mouse"></i></div><div class="title">Basic Computer Skills</div></summary>
@@ -148,5 +155,20 @@
             <p><em>Resources:</em> Free courses on Coursera, edX, or YouTube. Look for "Python for beginners" or "AI for everyone".</p>
         </section>
     </div>
+    <script>
+        const toggleAllBtn = document.getElementById('toggle-all');
+        const details = document.querySelectorAll('.cards-section details');
+        
+        toggleAllBtn.addEventListener('click', () => {
+            const allOpen = Array.from(details).every(d => d.open);
+            if (allOpen) {
+                details.forEach(d => d.open = false);
+                toggleAllBtn.textContent = 'Expand All';
+            } else {
+                details.forEach(d => d.open = true);
+                toggleAllBtn.textContent = 'Collapse All';
+            }
+        });
+    </script>
 </body>
 </html>
