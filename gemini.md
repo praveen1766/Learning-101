@@ -121,8 +121,9 @@ Each card follows this consistent format:
 4. **Create Card File:** Copy template, customize content for the topic following the established patterns
 5. **Update Index:** Add card link in the relevant `<details>` section
 6. **Update Navigation:** Modify prev/next links in adjacent cards
-7. **Test Locally:** Ensure animations, quiz, and links work
-8. **Commit & Push:** Use descriptive commit messages
+7. **Update Progress:** Update the "Current Project Structure" and "Current Progress & Next Steps" sections in this gemini.md file to reflect the new card
+8. **Test Locally:** Ensure animations, quiz, and links work
+9. **Commit & Push:** Use descriptive commit messages including the updated gemini.md
 
 ## Current Progress & Next Steps
 - **Completed:** Basic Computer Skills Cards 1-3
