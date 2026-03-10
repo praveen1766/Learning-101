@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Preparation - Card 3: Preparing for an Interview</title>
+    <title>Data and Databases - Card 5: Introduction to SQL</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
@@ -24,12 +24,15 @@
         .step-content h3 { margin: 0 0 10px 0; color: #2563eb; }
         .step-content p { margin: 0; font-size: 0.95em; }
 
-        .terms-section { margin-top: 40px; padding: 20px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #0ea5e9; animation: fadeIn 1s ease-in 2.5s both; }
+        .code-example { background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace; margin: 20px 0; animation: fadeIn 1s ease-in 2.5s both; }
+        .code-example pre { margin: 0; }
+
+        .terms-section { margin-top: 40px; padding: 20px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #0ea5e9; animation: fadeIn 1s ease-in 3s both; }
         .terms-section h3 { margin-top: 0; color: #0c4a6e; }
         .terms-section ul { padding-left: 20px; }
         .terms-section li { margin-bottom: 10px; }
 
-        .quiz-section { margin-top: 40px; padding: 20px; background: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6; animation: fadeIn 1s ease-in 3s both; }
+        .quiz-section { margin-top: 40px; padding: 20px; background: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6; animation: fadeIn 1s ease-in 3.5s both; }
         .quiz-section h3 { margin-top: 0; color: #1e40af; }
         .btn { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #2563eb; color: white; text-decoration: none; border-radius: 6px; cursor: pointer; border: none; font-size: 1em; transition: background 0.3s; }
         .btn:hover { background: #1d4ed8; }
@@ -42,45 +45,49 @@
 <body>
 
     <div class="card">
-        <h1><i class="fas fa-user-tie"></i> Card 3: Preparing for an Interview</h1>
+        <h1><i class="fas fa-code"></i> Card 5: Introduction to SQL</h1>
 
-        <p>An interview is your chance to shine. It's like meeting respected elders in your village – you want to be confident, polite, and show them your best self. Good preparation is key to success.</p>
+        <p>Once you have a database, how do you talk to it? You use a special language called <strong>SQL (Structured Query Language)</strong>. Think of it as the language of databases.</p>
 
         <div class="storyboard">
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-building"></i></div>
+                <div class="icon"><i class="fas fa-search"></i></div>
                 <div class="step-content">
-                    <h3>1. Research the Company</h3>
-                    <p><strong>Story:</strong> Before the interview, find out what the company does. If it's an IT company in Hyderabad, what services do they offer? This shows you are genuinely interested.</p>
-                    <p><strong>Tip:</strong> Look at the company's website for 10-15 minutes.</p>
+                    <h3>1. SELECT: Asking for Data</h3>
+                    <p><strong>Story:</strong> The `SELECT` command is used to retrieve data from a database. It's like asking a question.</p>
+                    <p><strong>Analogy:</strong> You ask the village registrar, "Can you <strong>SELECT</strong> all the farmers from 'Guntur' district?"</p>
+                    <p><strong>Code:</strong> `SELECT * FROM Farmers WHERE district = 'Guntur';`</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-comments"></i></div>
+                <div class="icon"><i class="fas fa-plus-circle"></i></div>
                 <div class="step-content">
-                    <h3>2. Practice Common Questions</h3>
-                    <p><strong>Story:</strong> Be ready to answer questions like "Tell me about yourself" and "Why do you want this job?". Practice your answers with a friend. This builds confidence.</p>
-                    <p><strong>Tip:</strong> Prepare a short, positive story about your skills.</p>
+                    <h3>2. INSERT: Adding New Data</h3>
+                    <p><strong>Story:</strong> The `INSERT` command adds a new row of data into a table.</p>
+                    <p><strong>Analogy:</strong> A new family moves into the village. You <strong>INSERT</strong> their details into the village records.</p>
+                    <p><strong>Code:</strong> `INSERT INTO Farmers (name, village) VALUES ('Krishna', 'Mangalagiri');`</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-tshirt"></i></div>
+                <div class="icon"><i class="fas fa-edit"></i></div>
                 <div class="step-content">
-                    <h3>3. Dress Professionally</h3>
-                    <p><strong>Story:</strong> Wear clean, ironed, and formal or semi-formal clothes. It shows you are serious and respect the opportunity.</p>
-                    <p><strong>Analogy:</strong> Just like dressing well for a festival or a wedding in your village.</p>
+                    <h3>3. UPDATE: Changing Existing Data</h3>
+                    <p><strong>Story:</strong> The `UPDATE` command modifies existing data in a table.</p>
+                    <p><strong>Analogy:</strong> Someone changes their phone number. You find their name and <strong>UPDATE</strong> their record with the new number.</p>
+                     <p><strong>Code:</strong> `UPDATE Farmers SET phone_number = '9999988888' WHERE name = 'Krishna';`</p>
                 </div>
             </div>
-            
+
             <div class="story-step">
-                <div class="icon"><i class="fas fa-handshake"></i></div>
+                <div class="icon"><i class="fas fa-trash-alt"></i></div>
                 <div class="step-content">
-                    <h3>4. During the Interview</h3>
-                    <p><strong>Story:</strong> Be polite, listen carefully, and maintain eye contact. At the end, thank the interviewer for their time. It leaves a good impression.</p>
-                    <p><strong>Tip:</strong> It's okay to say "I don't know, but I am eager to learn."</p>
+                    <h3>4. DELETE: Removing Data</h3>
+                    <p><strong>Story:</strong> The `DELETE` command removes one or more rows from a table.</p>
+                    <p><strong>Analogy:</strong> A family moves out of the village. You find their record and <strong>DELETE</strong> it from the registry.</p>
+                    <p><strong>Code:</strong> `DELETE FROM Farmers WHERE name = 'Krishna';`</p>
                 </div>
             </div>
 
@@ -89,22 +96,23 @@
         <div class="terms-section">
             <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
             <ul>
-                <li><strong>Common Questions:</strong> Standard questions asked in most interviews (e.g., "What are your strengths?").</li>
-                <li><strong>Body Language:</strong> How you present yourself non-verbally (e.g., sitting up straight, smiling).</li>
-                <li><strong>Professionalism:</strong> Acting in a serious, respectful, and appropriate manner for a work environment.</li>
-                <li><strong>Company Culture:</strong> The values and behaviors of a company. Researching this helps you fit in.</li>
-                <li><strong>Follow-up:</strong> Sending a thank-you email after the interview. This is a very good practice.</li>
+                <li><strong>SQL (Structured Query Language):</strong> The standard language for managing and manipulating relational databases.</li>
+                <li><strong>Query:</strong> A command written in SQL, like a question or instruction for the database.</li>
+                <li><strong>SELECT:</strong> A command to retrieve data.</li>
+                <li><strong>INSERT:</strong> A command to add new data.</li>
+                <li><strong>UPDATE:</strong> A command to modify existing data.</li>
+                <li><strong>DELETE:</strong> A command to remove data.</li>
             </ul>
         </div>
 
         <div class="quiz-section">
             <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
-            <p>What is one of the most important things to do BEFORE an interview?</p>
+            <p>You want to add a new book to your library database. Which SQL command would you use?</p>
             <select id="q1">
                 <option value="none">-- Select an answer --</option>
-                <option value="research">Research the company</option>
-                <option value="eat">Eat a large meal</option>
-                <option value="watch">Watch a movie</option>
+                <option value="select">SELECT</option>
+                <option value="insert">INSERT</option>
+                <option value="update">UPDATE</option>
             </select>
             <br>
             <button class="btn" onclick="checkAnswer()">Submit Answer</button>
@@ -112,9 +120,9 @@
         </div>
 
         <div class="nav">
-            <a href="card2.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="card4.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
             <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
-            <a href="card4.html"><i class="fas fa-arrow-right"></i> Next Card</a>
+            <a href="card6.html"><i class="fas fa-arrow-right"></i> Next Card</a>
         </div>
 
     </div>
@@ -123,15 +131,15 @@
         function checkAnswer() {
             const answer = document.getElementById('q1').value;
             const resultText = document.getElementById('quiz-result');
-            if (answer === 'research') {
+            if (answer === 'insert') {
                 resultText.style.color = 'green';
-                resultText.innerHTML = "Excellent! Researching the company shows you are prepared and truly interested.";
+                resultText.innerHTML = "Correct! `INSERT` is used to add new records to a database.";
             } else if (answer === 'none') {
                 resultText.style.color = 'black';
                 resultText.innerHTML = "Please select an answer.";
             } else {
                 resultText.style.color = 'red';
-                resultText.innerHTML = "Not quite. While being relaxed is good, preparation is what will set you apart. Try again!";
+                resultText.innerHTML = "Not quite. That command is used for something else. The correct answer is `INSERT`.";
             }
         }
     </script>

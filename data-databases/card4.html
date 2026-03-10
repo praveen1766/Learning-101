@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data and Databases - Card 4: Data Modeling and Schema Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 800px; padding: 30px; border-top: 6px solid #2563eb; animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        h1 { color: #1e3a8a; margin-top: 0; text-align: center; }
+        p { line-height: 1.6; color: #4b5563; font-size: 1.05em; }
+
+        .storyboard { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
+        .story-step { display: flex; align-items: center; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; gap: 25px; opacity: 0; animation: slideIn 0.8s ease-out forwards; }
+        .story-step:nth-child(1) { animation-delay: 0.5s; }
+        .story-step:nth-child(2) { animation-delay: 1s; }
+        .story-step:nth-child(3) { animation-delay: 1.5s; }
+        .story-step:nth-child(4) { animation-delay: 2s; }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+        .story-step .icon { font-size: 48px; color: #2563eb; width: 48px; text-align: center; }
+        .step-content { flex: 1; }
+        .step-content h3 { margin: 0 0 10px 0; color: #2563eb; }
+        .step-content p { margin: 0; font-size: 0.95em; }
+
+        .code-example { background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace; margin: 20px 0; animation: fadeIn 1s ease-in 2.5s both; }
+        .code-example pre { margin: 0; }
+
+        .terms-section { margin-top: 40px; padding: 20px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #0ea5e9; animation: fadeIn 1s ease-in 3s both; }
+        .terms-section h3 { margin-top: 0; color: #0c4a6e; }
+        .terms-section ul { padding-left: 20px; }
+        .terms-section li { margin-bottom: 10px; }
+
+        .quiz-section { margin-top: 40px; padding: 20px; background: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6; animation: fadeIn 1s ease-in 3.5s both; }
+        .quiz-section h3 { margin-top: 0; color: #1e40af; }
+        .btn { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #2563eb; color: white; text-decoration: none; border-radius: 6px; cursor: pointer; border: none; font-size: 1em; transition: background 0.3s; }
+        .btn:hover { background: #1d4ed8; }
+        #quiz-result { margin-top: 15px; font-weight: bold; }
+
+        .nav { text-align: center; margin-top: 30px; }
+        .nav a { text-decoration: none; color: #2563eb; font-weight: bold; margin: 0 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1><i class="fas fa-drafting-compass"></i> Card 4: Data Modeling and Schema Design</h1>
+
+        <p>Before you build a house, you need a blueprint. Similarly, before you create a database, you need a plan for how your data will be organized. This plan is called a <strong>data model</strong> or <strong>schema</strong>.</p>
+
+        <div class="storyboard">
+
+            <div class="story-step">
+                <div class="icon"><i class="fas fa-sitemap"></i></div>
+                <div class="step-content">
+                    <h3>1. What is a Data Model?</h3>
+                    <p><strong>Story:</strong> A data model is a drawing or a plan that shows what information you want to store and how it connects together.</p>
+                    <p><strong>Analogy:</strong> The architect's blueprint for a house in Amaravati, showing the number of rooms, their sizes, and where the doors are.</p>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <div class="icon"><i class="fas fa-user-friends"></i></div>
+                <div class="step-content">
+                    <h3>2. Entities and Attributes</h3>
+                    <p><strong>Entities:</strong> These are the main "things" you want to store data about. For a school, entities would be `Students`, `Teachers`, and `Courses`.</p>
+                    <p><strong>Attributes:</strong> These are the properties or details of an entity. For a `Student`, attributes would be `student_name`, `age`, and `village`.</p>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <div class="icon"><i class="fas fa-link"></i></div>
+                <div class="step-content">
+                    <h3>3. Relationships</h3>
+                    <p><strong>Story:</strong> Relationships show how different entities are connected. For example, a `Student` *enrolls in* a `Course`. A `Teacher` *teaches* a `Course`.</p>
+                    <p><strong>Analogy:</strong> The blueprint showing that a door connects the living room to the kitchen.</p>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <div class="icon"><i class="fas fa-table"></i></div>
+                <div class="step-content">
+                    <h3>4. Creating a Simple Schema</h3>
+                    <p><strong>Story:</strong> Once you have a plan, you create the schema. In a SQL database, this means creating tables. A `Students` table might have columns for `student_id`, `first_name`, and `village`.</p>
+                    <p><strong>Tip:</strong> The `student_id` is a unique identifier, also known as a <strong>Primary Key</strong>.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="terms-section">
+            <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
+            <ul>
+                <li><strong>Data Model/Schema:</strong> The blueprint for a database's structure.</li>
+                <li><strong>Entity:</strong> A "thing" or object of importance you are storing data about (e.g., `Customer`, `Product`).</li>
+                <li><strong>Attribute:</strong> A property or characteristic of an entity (e.g., `customer_name`, `product_price`).</li>
+                <li><strong>Relationship:</strong> The connection or association between two or more entities.</li>
+                <li><strong>Primary Key:</strong> A unique identifier for each record in a table, like a roll number for a student.</li>
+            </ul>
+        </div>
+
+        <div class="quiz-section">
+            <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
+            <p>If you were designing a database for a village library, what would be an example of an **entity**?</p>
+            <select id="q1">
+                <option value="none">-- Select an answer --</option>
+                <option value="book">Book</option>
+                <option value="book_title">Book Title</option>
+                <option value="number_of_pages">Number of Pages</option>
+            </select>
+            <br>
+            <button class="btn" onclick="checkAnswer()">Submit Answer</button>
+            <p id="quiz-result"></p>
+        </div>
+
+        <div class="nav">
+            <a href="card3.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
+            <a href="card5.html"><i class="fas fa-arrow-right"></i> Next Card</a>
+        </div>
+
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('q1').value;
+            const resultText = document.getElementById('quiz-result');
+            if (answer === 'book') {
+                resultText.style.color = 'green';
+                resultText.innerHTML = "Correct! 'Book' is a main 'thing' you would store information about. Its attributes would be things like 'title' and 'author'.";
+            } else if (answer === 'none') {
+                resultText.style.color = 'black';
+                resultText.innerHTML = "Please select an answer.";
+            } else {
+                resultText.style.color = 'red';
+                resultText.innerHTML = "Not quite. 'Book Title' and 'Number of Pages' are details (attributes) about the main thing. What is the main thing itself?";
+            }
+        }
+    </script>
+</body>
+</html>

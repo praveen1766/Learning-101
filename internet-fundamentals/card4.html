@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Basics - Card 3: Types of Machine Learning</title>
+    <title>Internet Fundamentals - Card 4: Domain Names and IP Addresses</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #333; }
@@ -23,12 +23,12 @@
         .step-content h3 { margin: 0 0 10px 0; color: #2563eb; }
         .step-content p { margin: 0; font-size: 0.95em; }
 
-        .terms-section { margin-top: 40px; padding: 20px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #0ea5e9; animation: fadeIn 1s ease-in 2s both; }
+        .terms-section { margin-top: 40px; padding: 20px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #0ea5e9; animation: fadeIn 1s ease-in 2.5s both; }
         .terms-section h3 { margin-top: 0; color: #0c4a6e; }
         .terms-section ul { padding-left: 20px; }
         .terms-section li { margin-bottom: 10px; }
 
-        .quiz-section { margin-top: 40px; padding: 20px; background: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6; animation: fadeIn 1s ease-in 2.5s both; }
+        .quiz-section { margin-top: 40px; padding: 20px; background: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6; animation: fadeIn 1s ease-in 3s both; }
         .quiz-section h3 { margin-top: 0; color: #1e40af; }
         .btn { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #2563eb; color: white; text-decoration: none; border-radius: 6px; cursor: pointer; border: none; font-size: 1em; transition: background 0.3s; }
         .btn:hover { background: #1d4ed8; }
@@ -41,36 +41,36 @@
 <body>
 
     <div class="card">
-        <h1><i class="fas fa-chalkboard-teacher"></i> Card 3: Types of Machine Learning</h1>
+        <h1><i class="fas fa-map-marker-alt"></i> Card 4: Domain Names and IP Addresses</h1>
 
-        <p>Machine learning has different styles of learning, just like students. Some learn with a teacher, and some learn by finding patterns on their own. Let's explore the two main types: Supervised and Unsupervised Learning.</p>
+        <p>Every house needs an address so people can find it. In the same way, every website and device on the internet needs an address. Let's learn how this works.</p>
 
         <div class="storyboard">
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-user-graduate"></i></div>
+                <div class="icon"><i class="fas fa-network-wired"></i></div>
                 <div class="step-content">
-                    <h3>Supervised Learning: Learning with a Teacher</h3>
-                    <p><strong>Story:</strong> In Supervised Learning, the AI is given labeled data. We show it pictures of mangoes and label them "ripe" or "not ripe." After seeing enough examples, it can predict if a new mango is ripe.</p>
-                    <p><strong>Analogy:</strong> A farming expert in an Andhra village teaching a new farmer which crops are ready to harvest.</p>
+                    <h3>1. IP Address: The Real Address</h3>
+                    <p><strong>Story:</strong> Every device on the internet (like your phone or a website's server) has a unique number called an IP Address. It looks something like `172.217.166.46`.</p>
+                    <p><strong>Analogy:</strong> Think of an IP address as the exact survey number and plot coordinates of a piece of land in Amaravati. It's precise, but very hard to remember.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="icon"><i class="fas fa-signature"></i></div>
                 <div class="step-content">
-                    <h3>Unsupervised Learning: Learning on Your Own</h3>
-                    <p><strong>Story:</strong> In Unsupervised Learning, the AI gets data with no labels. It has to find patterns by itself. For example, it could group customers at a market in Guntur based on what they buy, without being told what the groups should be.</p>
-                    <p><strong>Analogy:</strong> A shopkeeper noticing that customers who buy rice also tend to buy lentils, and grouping them together.</p>
+                    <h3>2. Domain Name: The Easy Address</h3>
+                    <p><strong>Story:</strong> Because numbers are hard to remember, we use easy-to-read Domain Names like `google.com` or `eenadu.net`.</p>
+                    <p><strong>Analogy:</strong> Instead of using the plot number, you tell people the name of the house, like "Ramayya's Illu." It's much easier to remember and share. The domain name is the house name.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <div class="icon"><i class="fas fa-cogs"></i></div>
+                <div class="icon"><i class="fas fa-address-book"></i></div>
                 <div class="step-content">
-                    <h3>Real-World Examples</h3>
-                    <p><strong>Supervised:</strong> Predicting the price of a house based on its size and location, using past sales data.</p>
-                    <p><strong>Unsupervised:</strong> Recommending movies on a streaming service by finding groups of users with similar tastes.</p>
+                    <h3>3. DNS: The Phonebook of the Internet</h3>
+                    <p><strong>Story:</strong> The Domain Name System (DNS) is a giant, global phonebook. When you type `google.com` into your browser, the DNS looks up this name and finds the matching IP address number for it.</p>
+                    <p><strong>Analogy:</strong> It's like asking a village elder, "Where is Ramayya's Illu?" The elder knows the village inside and out, and points you to the exact location (the IP Address).</p>
                 </div>
             </div>
 
@@ -79,21 +79,22 @@
         <div class="terms-section">
             <h3><i class="fas fa-book"></i> Key Technical Terms</h3>
             <ul>
-                <li><strong>Supervised Learning:</strong> Training an AI model with labeled data (data with answers).</li>
-                <li><strong>Unsupervised Learning:</strong> Training an AI model with unlabeled data to find hidden patterns.</li>
-                <li><strong>Labeled Data:</strong> Data that has been tagged with a correct answer or label (e.g., photos of cats labeled "cat").</li>
-                <li><strong>Unlabeled Data:</strong> Data without any tags or answers.</li>
-                <li><strong>Clustering:</strong> A common unsupervised learning task of grouping similar data points together.</li>
+                <li><strong>IP Address (Internet Protocol Address):</strong> A unique string of numbers that identifies each device on a network.</li>
+                <li><strong>Domain Name:</strong> A human-readable name for a website (e.g., google.com).</li>
+                <li><strong>DNS (Domain Name System):</strong> The service that translates domain names into IP addresses.</li>
+                <li><strong>URL (Uniform Resource Locator):</strong> The full address of a web page (e.g., `https://www.google.com/search`).</li>
+                <li><strong>TLD (Top-Level Domain):</strong> The last part of a domain name, like `.com`, `.in`, or `.org`.</li>
             </ul>
         </div>
 
         <div class="quiz-section">
             <h3><i class="fas fa-question-circle"></i> Knowledge Check</h3>
-            <p>If you teach an AI by showing it photos of cats and dogs that are already labeled, what type of learning is this?</p>
+            <p>What is the main job of the DNS?</p>
             <select id="q1">
                 <option value="none">-- Select an answer --</option>
-                <option value="supervised">Supervised Learning</option>
-                <option value="unsupervised">Unsupervised Learning</option>
+                <option value="translate">To translate easy-to-read domain names into number-based IP addresses.</option>
+                <option value="style">To style the website with colors.</option>
+                <option value="store">To store the website's files.</option>
             </select>
             <br>
             <button class="btn" onclick="checkAnswer()">Submit Answer</button>
@@ -101,9 +102,9 @@
         </div>
 
         <div class="nav">
-            <a href="card2.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
+            <a href="card3.html"><i class="fas fa-arrow-left"></i> Previous Card</a>
             <a href="../index.html"><i class="fas fa-home"></i> Back to Portal</a>
-            <a href="card4.html"><i class="fas fa-arrow-right"></i> Next Card</a>
+            <a href="card5.html"><i class="fas fa-arrow-right"></i> Next Card</a>
         </div>
 
     </div>
@@ -112,15 +113,15 @@
         function checkAnswer() {
             const answer = document.getElementById('q1').value;
             const resultText = document.getElementById('quiz-result');
-            if (answer === 'supervised') {
+            if (answer === 'translate') {
                 resultText.style.color = 'green';
-                resultText.innerHTML = "Correct! Using labeled data is the key to Supervised Learning.";
+                resultText.innerHTML = "Correct! DNS acts as the internet's phonebook, connecting the name you type to the server's real IP address.";
             } else if (answer === 'none') {
                 resultText.style.color = 'black';
                 resultText.innerHTML = "Please select an answer.";
             } else {
                 resultText.style.color = 'red';
-                resultText.innerHTML = "Not quite. When the data has labels (answers), it's like having a teacher. Think again!";
+                resultText.innerHTML = "Not quite. Remember, DNS is like the village elder who knows where everyone lives. It connects names to locations.";
             }
         }
     </script>
